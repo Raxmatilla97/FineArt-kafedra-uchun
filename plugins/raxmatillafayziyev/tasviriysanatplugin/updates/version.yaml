@@ -1,0 +1,53 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table raxmatillafayziyev_tasviriysanatplugin_teachers'
+    - builder_table_create_raxmatillafayziyev_tasviriysanatplugin_teachers.php
+1.0.3:
+    - 'Created table raxmatillafayziyev_tasviriysanatplugin_library'
+    - builder_table_create_raxmatillafayziyev_tasviriysanatplugin_library.php
+1.0.4:
+    - 'Created table raxmatillafayziyev_tasviriysanatplugin_katalog_artist'
+    - builder_table_create_raxmatillafayziyev_tasviriysanatplugin_katalog_artist.php
+1.0.5:
+    - 'Created table raxmatillafayziyev_tasviriysanatplugin_katalog_art_work'
+    - builder_table_create_raxmatillafayziyev_tasviriysanatplugin_katalog_art_work.php
+1.0.6:
+    - 'Updated table raxmatillafayziyev_tasviriysanatplugin_katalog_art_work'
+    - builder_table_update_raxmatillafayziyev_tasviriysanatplugin_katalog_art_work.php
+1.0.7:
+    - 'Created table raxmatillafayziyev_tasviriysanatplugin_rassomlar_haqida'
+    - builder_table_create_raxmatillafayziyev_tasviriysanatplugin_rassomlar_haqida.php
+1.0.8:
+    - 'Updated table raxmatillafayziyev_tasviriysanatplugin_katalog_art_work'
+    - builder_table_update_raxmatillafayziyev_tasviriysanatplugin_katalog_art_work_2.php
+1.0.9:
+    - 'Updated table raxmatillafayziyev_tasviriysanatplugin_rassomlar_haqida'
+    - builder_table_update_raxmatillafayziyev_tasviriysanatplugin_rassomlar_haqida.php
+1.0.10:
+    - 'Updated table raxmatillafayziyev_tasviriysanatplugin_katalog_artist'
+    - builder_table_update_raxmatillafayziyev_tasviriysanatplugin_katalog_artist.php
+1.0.11:
+    - 'Created table raxmatillafayziyev_tasviriysanatplugin_library_category'
+    - builder_table_create_raxmatillafayziyev_tasviriysanatplugin_library_category.php
+1.0.12:
+    - 'Updated table raxmatillafayziyev_tasviriysanatplugin_katalog_artist'
+    - builder_table_update_raxmatillafayziyev_tasviriysanatplugin_katalog_artist_2.php
+1.0.13:
+    - 'Updated table raxmatillafayziyev_tasviriysanatplugin_library'
+    - builder_table_update_raxmatillafayziyev_tasviriysanatplugin_library.php
+1.0.14:
+    - 'Updated table raxmatillafayziyev_tasviriysanatplugin_teachers'
+    - builder_table_update_raxmatillafayziyev_tasviriysanatplugin_teachers.php
+1.0.15:
+    - 'Updated table raxmatillafayziyev_tasviriysanatplugin_teachers'
+    - builder_table_update_raxmatillafayziyev_tasviriysanatplugin_teachers_2.php
+1.0.16:
+    - 'Updated table raxmatillafayziyev_tasviriysanatplugin_teachers'
+    - builder_table_update_raxmatillafayziyev_tasviriysanatplugin_teachers_3.php
+1.0.17:
+    - 'Updated table raxmatillafayziyev_tasviriysanatplugin_teachers'
+    - builder_table_update_raxmatillafayziyev_tasviriysanatplugin_teachers_4.php
+1.0.18:
+    - 'Updated table raxmatillafayziyev_tasviriysanatplugin_teachers'
+    - builder_table_update_raxmatillafayziyev_tasviriysanatplugin_teachers_5.php

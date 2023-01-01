@@ -1,0 +1,20 @@
+columns:
+    familya:
+        label: familya
+        type: text
+        searchable: true
+    ism:
+        label: ism
+        type: text
+        searchable: true
+    sharif:
+        label: sharif
+        type: text
+        searchable: true
+    lavozim:
+        label: lavozim
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+        sortable: true
