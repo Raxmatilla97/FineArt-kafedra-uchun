@@ -1,0 +1,10 @@
+name: Kutubxona
+form: $/raxidev/artpanel/models/library/fields.yaml
+modelClass: RaxiDev\ArtPanel\Models\Library
+defaultRedirect: raxidev/artpanel/kutubxona
+create:
+    redirect: 'raxidev/artpanel/kutubxona/update/:id'
+    redirectClose: raxidev/artpanel/kutubxona
+update:
+    redirect: raxidev/artpanel/kutubxona
+    redirectClose: raxidev/artpanel/kutubxona

@@ -21,6 +21,3 @@ columns:
         label: 'Yaratilgan sana'
         type: datetime
         sortable: true
-    updated_at:
-        label: 'Yangilangan sana'
-        type: datetime

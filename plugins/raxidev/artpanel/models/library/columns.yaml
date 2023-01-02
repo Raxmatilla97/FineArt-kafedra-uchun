@@ -1,11 +1,16 @@
 columns:
-    fish:
-        label: 'Familya ism sharif'
+    title:
+        label: Nomlanishi
         type: text
         searchable: true
     is_active:
         label: Aktivligi
         type: switch
+    user_id:
+        label: 'Yaratgan admin'
+        type: number
+        select: "concat(first_name, ' ', last_name)"
+        relation: user
     created_at:
         label: 'Yaratilgan sana'
         type: datetime

@@ -1,0 +1,46 @@
+fields:
+    title:
+        label: 'Elektron resurs nomi'
+        span: auto
+        type: text
+    slug:
+        label: 'Resursning sahifa URL manzili (Avtomatik!)'
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    is_active:
+        label: Aktivligi
+        span: auto
+        type: switch
+tabs:
+    fields:
+        content:
+            label: 'Asosiy qism'
+            size: huge
+            span: full
+            type: richeditor
+            tab: 'Asosiy content qismi'
+        rasm:
+            label: 'Resursning suratini yuklang'
+            mode: image
+            imageWidth: '200'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Yuklamalar
+        fayl:
+            label: 'Resursni PDF variantini yuklang'
+            mode: file
+            fileTypes: 'pdf, doc, docx, ppt, pptx, mp4'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Yuklamalar
