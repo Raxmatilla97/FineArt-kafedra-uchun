@@ -1,0 +1,16 @@
+columns:
+    fish:
+        label: 'Familya ism sharif'
+        type: text
+        searchable: true
+    is_active:
+        label: Aktivligi
+        type: switch
+    created_at:
+        label: 'Yaratilgan sana'
+        type: datetime
+        sortable: true
+    updated_at:
+        label: 'Yangilangan sana'
+        type: datetime
+        sortable: false

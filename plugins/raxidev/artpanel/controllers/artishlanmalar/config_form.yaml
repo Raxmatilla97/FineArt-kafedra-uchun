@@ -1,0 +1,10 @@
+name: ArtIshlanmalar
+form: $/raxidev/artpanel/models/artwork/fields.yaml
+modelClass: RaxiDev\ArtPanel\Models\ArtWork
+defaultRedirect: raxidev/artpanel/artishlanmalar
+create:
+    redirect: 'raxidev/artpanel/artishlanmalar/update/:id'
+    redirectClose: raxidev/artpanel/artishlanmalar
+update:
+    redirect: raxidev/artpanel/artishlanmalar
+    redirectClose: raxidev/artpanel/artishlanmalar

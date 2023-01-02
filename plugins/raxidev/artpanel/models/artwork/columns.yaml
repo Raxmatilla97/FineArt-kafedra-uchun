@@ -1,0 +1,26 @@
+columns:
+    title:
+        label: Nomlanishi
+        type: text
+        searchable: true
+    is_active:
+        label: Aktivligi
+        type: switch
+    is_sale:
+        label: Sotuvdaligi
+        type: switch
+    price:
+        label: Narxi
+        type: text
+    rassom_id:
+        label: 'Rassom ismi'
+        type: number
+        select: fish
+        relation: rassom
+    created_at:
+        label: 'Yaratilgan sana'
+        type: datetime
+        sortable: true
+    updated_at:
+        label: 'Yangilangan sana'
+        type: datetime

@@ -1,0 +1,20 @@
+plugin:
+    name: 'raxidev.artpanel::lang.plugin.name'
+    description: 'raxidev.artpanel::lang.plugin.description'
+    author: Raxi-dev
+    icon: oc-icon-bank
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Art PORTAL'
+        url: raxidev/artpanel/rassomlar
+        icon: icon-bank
+        sideMenu:
+            side-menu-item:
+                label: Rassomlar
+                url: raxidev/artpanel/rassomlar
+                icon: icon-sitemap
+            side-menu-item2:
+                label: 'Art ishlanmalar'
+                url: raxidev/artpanel/artishlanmalar
+                icon: icon-sitemap

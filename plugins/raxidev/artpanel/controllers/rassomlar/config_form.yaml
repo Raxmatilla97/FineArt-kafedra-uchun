@@ -1,0 +1,10 @@
+name: Rassomlar
+form: $/raxidev/artpanel/models/rassom/fields.yaml
+modelClass: RaxiDev\ArtPanel\Models\Rassom
+defaultRedirect: raxidev/artpanel/rassomlar
+create:
+    redirect: 'raxidev/artpanel/rassomlar/update/:id'
+    redirectClose: raxidev/artpanel/rassomlar
+update:
+    redirect: raxidev/artpanel/rassomlar
+    redirectClose: raxidev/artpanel/rassomlar
