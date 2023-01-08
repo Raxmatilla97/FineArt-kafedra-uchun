@@ -11,14 +11,18 @@ navigation:
         icon: icon-bank
         sideMenu:
             side-menu-item:
-                label: Rassomlar
+                label: 'Univer Rassomlari'
                 url: raxidev/artpanel/rassomlar
-                icon: icon-sitemap
+                icon: icon-users
             side-menu-item2:
-                label: 'Art ishlanmalar'
+                label: 'Univer ART ishlanmalari'
                 url: raxidev/artpanel/artishlanmalar
-                icon: icon-sitemap
+                icon: icon-slack
             side-menu-item3:
-                label: Kutubxona
+                label: 'Univer kutubxonasi'
                 url: raxidev/artpanel/kutubxona
-                icon: icon-sitemap
+                icon: icon-book
+                counter: ''
+                counterLabel: ''
+                attributes:
+                    - '<hr>'
