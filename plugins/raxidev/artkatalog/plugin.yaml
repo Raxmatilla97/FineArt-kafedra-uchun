@@ -1,0 +1,6 @@
+plugin:
+    name: 'raxidev.artkatalog::lang.plugin.name'
+    description: 'raxidev.artkatalog::lang.plugin.description'
+    author: Raxi-dev
+    icon: oc-icon-archive
+    homepage: ''
