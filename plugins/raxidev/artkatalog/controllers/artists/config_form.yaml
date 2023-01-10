@@ -1,0 +1,10 @@
+name: Artists
+form: $/raxidev/artkatalog/models/artists/fields.yaml
+modelClass: RaxiDev\ArtKatalog\Models\Artists
+defaultRedirect: raxidev/artkatalog/artists
+create:
+    redirect: 'raxidev/artkatalog/artists/update/:id'
+    redirectClose: raxidev/artkatalog/artists
+update:
+    redirect: raxidev/artkatalog/artists
+    redirectClose: raxidev/artkatalog/artists

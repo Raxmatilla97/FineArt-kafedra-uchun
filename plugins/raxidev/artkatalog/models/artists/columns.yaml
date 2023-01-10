@@ -1,0 +1,12 @@
+columns:
+    fish:
+        label: 'Familya Ism Sharii'
+        type: text
+        searchable: true
+    is_active:
+        label: Aktivligi
+        type: switch
+    created_at:
+        label: 'Yaratilgan sana'
+        type: datetime
+        sortable: true

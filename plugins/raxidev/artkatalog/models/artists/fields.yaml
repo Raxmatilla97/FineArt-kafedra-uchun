@@ -1,0 +1,36 @@
+fields:
+    fish:
+        label: 'Familya ism sharif'
+        span: auto
+        type: text
+    slug:
+        label: 'Sahifaga URL (avtomatik iritiladi)'
+        span: auto
+        preset:
+            field: fish
+            type: slug
+        type: text
+    is_active:
+        label: Aktivligi
+        'on': Ha
+        'off': Yoq
+        span: auto
+        type: switch
+    avatar:
+        label: 'Rassom surati'
+        mode: image
+        imageWidth: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+tabs:
+    fields:
+        content:
+            label: 'Asosiy content qismi'
+            size: huge
+            span: full
+            type: richeditor
+            tab: 'Asosiy qism'

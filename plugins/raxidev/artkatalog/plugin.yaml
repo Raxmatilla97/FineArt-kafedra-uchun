@@ -4,3 +4,13 @@ plugin:
     author: Raxi-dev
     icon: oc-icon-archive
     homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Art KATALOG'
+        url: raxidev/artkatalog/artists
+        icon: icon-bar-chart
+        sideMenu:
+            side-menu-item:
+                label: "Rassomlar ro'yxati"
+                url: raxidev/artkatalog/artists
+                icon: icon-users
