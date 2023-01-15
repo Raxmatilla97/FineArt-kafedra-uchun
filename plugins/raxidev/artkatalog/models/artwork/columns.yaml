@@ -1,0 +1,26 @@
+columns:
+    title:
+        label: Nomlanishi
+        type: text
+        searchable: true
+        sortable: false
+    artists_id:
+        label: 'Rassom FISH'
+        type: text
+        searchable: true
+        select: fish
+        relation: artists
+    is_active:
+        label: Aktivligi
+        type: switch
+    category_id:
+        label: "Bo'limi"
+        type: text
+        searchable: true
+        sortable: false
+        select: title
+        relation: category
+    created_at:
+        label: 'Yaratilgan vaqti'
+        type: datetime
+        sortable: true

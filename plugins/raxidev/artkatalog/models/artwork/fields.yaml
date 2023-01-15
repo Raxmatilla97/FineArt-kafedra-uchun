@@ -1,0 +1,50 @@
+fields:
+    title:
+        label: 'Art ishlanmaning nomlanishi'
+        span: auto
+        type: text
+    slug:
+        label: 'Art ishlanmaning sahifa manzili (avtomatik kiritiladi)'
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    artists:
+        label: 'Rassomni belgilang'
+        nameFrom: artists_id
+        descriptionFrom: description
+        select: fish
+        span: auto
+        type: relation
+    is_active:
+        label: 'Art ishlanmaning sahifasi aktivligi'
+        'on': Ha
+        'off': "Yo'q"
+        span: auto
+        type: switch
+    category:
+        label: "Bo'limlar ro'yxati"
+        nameFrom: category_id
+        descriptionFrom: description
+        select: title
+        span: auto
+        type: relation
+    image:
+        label: 'Suratni yuklash'
+        mode: image
+        imageWidth: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+tabs:
+    fields:
+        content:
+            label: 'Asosiy yozuv qismi'
+            size: huge
+            span: full
+            type: richeditor
+            tab: 'Asosiy content qismi'

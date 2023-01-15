@@ -14,3 +14,11 @@ navigation:
                 label: "Rassomlar ro'yxati"
                 url: raxidev/artkatalog/artists
                 icon: icon-users
+            side-menu-item2:
+                label: 'Art ishlanmalar'
+                url: raxidev/artkatalog/artishlanmalar
+                icon: icon-sitemap
+            side-menu-item3:
+                label: "Bo'limlar ro'yxati"
+                url: raxidev/artkatalog/category
+                icon: icon-sliders

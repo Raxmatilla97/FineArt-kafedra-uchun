@@ -1,0 +1,10 @@
+name: Artishlanmalar
+form: $/raxidev/artkatalog/models/artwork/fields.yaml
+modelClass: RaxiDev\ArtKatalog\Models\Artwork
+defaultRedirect: raxidev/artkatalog/artishlanmalar
+create:
+    redirect: 'raxidev/artkatalog/artishlanmalar/update/:id'
+    redirectClose: raxidev/artkatalog/artishlanmalar
+update:
+    redirect: raxidev/artkatalog/artishlanmalar
+    redirectClose: raxidev/artkatalog/artishlanmalar

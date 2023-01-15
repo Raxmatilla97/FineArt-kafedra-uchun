@@ -1,0 +1,10 @@
+name: Category
+form: $/raxidev/artkatalog/models/category/fields.yaml
+modelClass: RaxiDev\ArtKatalog\Models\Category
+defaultRedirect: raxidev/artkatalog/category
+create:
+    redirect: 'raxidev/artkatalog/category/update/:id'
+    redirectClose: raxidev/artkatalog/category
+update:
+    redirect: raxidev/artkatalog/category
+    redirectClose: raxidev/artkatalog/category
