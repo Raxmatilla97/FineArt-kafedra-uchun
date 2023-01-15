@@ -1,9 +1,9 @@
 columns:
     title:
-        label: title
+        label: Nomlanishi
         type: text
         searchable: true
     created_at:
-        label: created_at
+        label: 'Yaratilgan vaqt'
         type: datetime
         sortable: true
