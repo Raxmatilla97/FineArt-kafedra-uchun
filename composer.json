@@ -10,7 +10,6 @@
         "laravel/framework": "^9.0",
         "october/all": "^3.0",
         "rainlab/builder-plugin": "^1.2",
-        "rainlab/blog-plugin": "^1.6",
         "indikator/news-plugin": "^1.12",
         "offline/sitesearch-plugin": "^1.5",
         "rainlab/pages-plugin": "^1.5",

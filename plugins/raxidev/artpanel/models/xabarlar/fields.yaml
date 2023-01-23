@@ -1,0 +1,44 @@
+fields:
+    title:
+        label: "Xabarning nomlanishi (Uncha uzun bo'lmagan sarlavha!)"
+        span: auto
+        type: text
+    slug:
+        label: 'Xabar sahifasining manzili (avtomatik kiritiladi)'
+        span: auto
+        preset:
+            field: slug
+            type: slug
+        type: text
+    is_active:
+        label: "Xabarning aktivligi (Ha yoki Yo'q)"
+        span: auto
+        type: switch
+    bolimlar:
+        label: "Tegishli bo'limini tanlang"
+        options:
+            elon: "E'lonlar"
+            yangilik: Yangiliklar
+            konfrensiya: Konfrensiyalar
+        showSearch: true
+        span: auto
+        type: dropdown
+    created_at:
+        label: 'Created at'
+        span: auto
+        type: datepicker
+tabs:
+    fields:
+        content:
+            label: 'Asosiy qism'
+            span: auto
+            type: richeditor
+            tab: 'Asosiy qism'
+        files:
+            label: "Ko'proq fayllarni yuklash joyi"
+            prompt: "Yangi fayl qo'shish"
+            style: default
+            span: full
+            type: repeater
+            tab: 'Fayillarni yuklash'
+            form: {  }

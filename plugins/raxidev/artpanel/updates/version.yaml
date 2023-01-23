@@ -21,3 +21,9 @@
 1.0.8:
     - 'Created table raxidev_artpanel_library'
     - builder_table_create_raxidev_artpanel_library.php
+1.0.9:
+    - 'Created table raxidev_artpanel_xabarlar'
+    - builder_table_create_raxidev_artpanel_xabarlar.php
+1.0.10:
+    - 'Updated table raxidev_artpanel_xabarlar'
+    - builder_table_update_raxidev_artpanel_xabarlar.php

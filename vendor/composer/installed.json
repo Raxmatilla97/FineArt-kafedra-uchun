@@ -5150,51 +5150,6 @@
             "install-path": "../psy/psysh"
         },
         {
-            "name": "rainlab/blog-plugin",
-            "version": "v1.6.2",
-            "version_normalized": "1.6.2.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://gateway.octobercms.com/composer/dist/rainlab/blog-plugin/rainlab-blog-plugin-48f4b2f1f212ea32f9604366aeb17eb580b97d44-zip-f56331.zip",
-                "reference": "48f4b2f1f212ea32f9604366aeb17eb580b97d44",
-                "shasum": "95ef11ed541c73f3cf1e3d28a46b52ba303a07bb"
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "php": ">=7.0"
-            },
-            "time": "2022-10-23T23:49:53+00:00",
-            "type": "october-plugin",
-            "installation-source": "dist",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alexey Bobkov",
-                    "email": "aleksey.bobkov@gmail.com",
-                    "role": "Co-founder"
-                },
-                {
-                    "name": "Samuel Georges",
-                    "email": "daftspunky@gmail.com",
-                    "role": "Co-founder"
-                }
-            ],
-            "description": "Blog plugin for October CMS",
-            "homepage": "https://octobercms.com/plugin/rainlab-blog",
-            "keywords": [
-                "blog",
-                "october",
-                "octobercms"
-            ],
-            "support": {
-                "source": "https://github.com/rainlab/blog-plugin/tree/v1.6.2",
-                "issues": "https://github.com/rainlab/blog-plugin/issues"
-            },
-            "install-path": "../../plugins/rainlab/blog"
-        },
-        {
             "name": "rainlab/builder-plugin",
             "version": "v1.2.6",
             "version_normalized": "1.2.6.0",

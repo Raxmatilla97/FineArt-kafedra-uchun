@@ -1,0 +1,19 @@
+columns:
+    title:
+        label: Nomlanishi
+        type: text
+    is_active:
+        label: Aktivligi
+        type: text
+    bolimlar:
+        label: "Bo'limi"
+        type: text
+    user_id:
+        label: Yozgan
+        type: number
+    created_at:
+        label: 'Yaratilgan vaqt'
+        type: datetime
+    updated_at:
+        label: 'Yangilangan vaqt'
+        type: datetime
