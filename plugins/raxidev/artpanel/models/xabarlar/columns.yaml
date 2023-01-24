@@ -2,18 +2,26 @@ columns:
     title:
         label: Nomlanishi
         type: text
+        searchable: true
+        sortable: false
     is_active:
         label: Aktivligi
-        type: text
+        type: switch
     bolimlar:
         label: "Bo'limi"
         type: text
+        searchable: true
     user_id:
         label: Yozgan
         type: number
+        searchable: true
+        select: "concat(first_name, ' ', last_name)"
+        relation: user
     created_at:
         label: 'Yaratilgan vaqt'
         type: datetime
+        searchable: true
+        sortable: true
     updated_at:
         label: 'Yangilangan vaqt'
         type: datetime

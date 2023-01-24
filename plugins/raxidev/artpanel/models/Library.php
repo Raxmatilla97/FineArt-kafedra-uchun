@@ -46,10 +46,9 @@ class Library extends Model
         $user = BackendAuth::getUser(); 
         $this->user_id = $user->id; 
         // $this->user_id - refers to your table column
-        }
+    }
 
-        public function getFullNameAttribute()
-    {
+    public function getFullNameAttribute(){
         return $this->firstname." ".$this->lastname;
     }
 

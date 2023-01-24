@@ -1,0 +1,12 @@
+list: $/raxidev/artpanel/models/xabarlar/columns.yaml
+modelClass: RaxiDev\ArtPanel\Models\Xabarlar
+title: Xabarlar
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'raxidev/artpanel/xabarlar/update/:id'

@@ -26,3 +26,7 @@ navigation:
                 counterLabel: ''
                 attributes:
                     - '<hr>'
+            side-menu-item4:
+                label: Xabarlar
+                url: raxidev/artpanel/xabarlar
+                icon: icon-newspaper-o

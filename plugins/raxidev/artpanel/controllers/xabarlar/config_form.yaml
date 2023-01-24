@@ -1,0 +1,10 @@
+name: Xabarlar
+form: $/raxidev/artpanel/models/xabarlar/fields.yaml
+modelClass: RaxiDev\ArtPanel\Models\Xabarlar
+defaultRedirect: raxidev/artpanel/xabarlar
+create:
+    redirect: 'raxidev/artpanel/xabarlar/update/:id'
+    redirectClose: raxidev/artpanel/xabarlar
+update:
+    redirect: raxidev/artpanel/xabarlar
+    redirectClose: raxidev/artpanel/xabarlar
