@@ -1,0 +1,27 @@
+columns:
+    small_title:
+        label: "Kichik sarlavha ko'rinishi"
+        type: text
+        searchable: true
+    big_title:
+        label: "Kotta sarlavha ko'rinishi"
+        type: text
+        searchable: false
+    button:
+        label: 'URL manzil'
+        type: text
+        default: Yozilmagan
+    tell:
+        label: 'Telefon raqam'
+        type: text
+        default: Yozilmagan
+    is_active:
+        label: is_active
+        type: switch
+    user_id:
+        label: user_id
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+        sortable: true

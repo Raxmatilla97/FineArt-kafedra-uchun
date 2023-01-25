@@ -1,0 +1,10 @@
+name: About
+form: $/raxidev/artpanel/models/about/fields.yaml
+modelClass: RaxiDev\ArtPanel\Models\About
+defaultRedirect: raxidev/artpanel/about
+create:
+    redirect: 'raxidev/artpanel/about/update/:id'
+    redirectClose: raxidev/artpanel/about
+update:
+    redirect: raxidev/artpanel/about
+    redirectClose: raxidev/artpanel/about

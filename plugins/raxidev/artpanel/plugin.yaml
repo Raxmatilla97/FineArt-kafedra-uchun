@@ -34,3 +34,7 @@ navigation:
                 label: Slayder
                 url: raxidev/artpanel/slayder
                 icon: icon-slack
+            side-menu-item6:
+                label: 'Biz haqimizda'
+                url: raxidev/artpanel/about
+                icon: icon-tablet

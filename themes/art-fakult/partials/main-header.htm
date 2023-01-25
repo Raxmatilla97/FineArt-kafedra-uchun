@@ -1,3 +1,6 @@
+[staticMenu]
+code = "asosiy-menyu"
+==
 <header class="main-header main-header-style2">    
     <!--Start Header upper Style2-->
     <div class="header-upper-style2">
@@ -22,54 +25,10 @@
                             </div>
 
                             <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-                                <ul class="navigation clearfix">
-                                 <li><a href="{{'/'}}">Bosh sahifa</a></li>
-                                    <li class="dropdown current"><a href="index-2.html#">{{"Xabarlar"|_}}</a>
-                                        <ul>
-                                            <li><a href="index.html">Yangiliklar</a></li>
-                                            <li><a href="index-2.html">E'lonlar</a></li>
-                                            <li><a href="index-3.html">Konfrensiyalar</a></li>
-                                            {# <li><a href="index-4.html">Home Page 04</a></li>
-                                            <li class="dropdown"><a href="index-2.html#">Header Styles</a>
-                                                <ul>
-                                                    <li><a href="index.html">Header Style One</a></li>
-                                                    <li><a href="index-2.html">Header Style Two</a></li>
-                                                    <li><a href="index-3.html">Header Style Three</a></li>
-                                                    <li><a href="index-4.html">Header Style Four</a></li>
-                                                </ul>    
-                                            </li> #}
-                                        </ul>
-                                    </li>
-                                   
-                                    <li class="dropdown"><a href="index-2.html#">Kafedra haqida</a>
-                                        <ul>
-                                            <li><a href="art.html">O'qituvchilar</a></li>
-                                            <li><a href="exhibitions.html">O'qitiladigan fanlar</a></li>
-                                            <li><a href="tickets.html">Elektron maqolalar</a></li>
-                                        </ul>
-                                    </li>
-                                    {# <li><a href="gallery.html">Elektron kutubxona</a></li> #}
-                                    <li class="dropdown"><a href="index-2.html#">Kutubxona</a>
-                                        <ul>
-                                            <li><a href="events.html">Elektron resurslar</a></li>
-                                            <li><a href="event-single.html">Kitoblar</a></li>
-                                            <li><a href="event-single.html">Maqolalar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="index-2.html#">Art katalog</a>
-                                    	<ul>
-                                            <li><a href="blog.html">Rassomlar</a></li>
-                                            <li><a href="blog-single.html">Art ishlanmalar</a></li>
-                                        </ul>
-                                    </li>
-                                     <li class="dropdown"><a href="index-2.html#">Ilmiy Jurnal</a>
-                                        <ul>
-                                            <li><a href="events.html">Jurnal to'plamlari</a></li>
-                                            <li><a href="event-single.html">Arxiv</a></li>
-                                            <li><a href="event-single.html">Maqolalar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Qayta a'loqa</a></li>
+                                <ul class="navigation clearfix">                               
+                                {% if staticMenu.menuItems %}                                    
+                                    {% partial staticMenu ~ "::items2" items=staticMenu.menuItems %}                                    
+                                {% endif %}                                 
                                 </ul>
                             </div>
                         </nav>                        
@@ -123,52 +82,9 @@
                     <nav class="main-menu navbar-expand-lg">
                         <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation clearfix">
-                             <li><a href="{{'/'}}">Bosh sahifa</a></li>
-                                <li class="dropdown current"><a href="index-2.html#">{{"Xabarlar"|_}}</a>
-                                        <ul>
-                                            <li><a href="index.html">Yangiliklar</a></li>
-                                            <li><a href="index-2.html">E'lonlar</a></li>
-                                            <li><a href="index-3.html">Konfrensiyalar</a></li>
-                                            {# <li><a href="index-4.html">Home Page 04</a></li>
-                                            <li class="dropdown"><a href="index-2.html#">Header Styles</a>
-                                                <ul>
-                                                    <li><a href="index.html">Header Style One</a></li>
-                                                    <li><a href="index-2.html">Header Style Two</a></li>
-                                                    <li><a href="index-3.html">Header Style Three</a></li>
-                                                    <li><a href="index-4.html">Header Style Four</a></li>
-                                                </ul>    
-                                            </li> #}
-                                        </ul>
-                                    </li>
-                                <li class="dropdown"><a href="index-2.html#">Kafedra haqida</a>
-                                        <ul>
-                                            <li><a href="art.html">O'qituvchilar</a></li>
-                                            <li><a href="exhibitions.html">O'qitiladigan fanlar</a></li>
-                                            <li><a href="tickets.html">Elektron maqolalar</a></li>
-                                        </ul>
-                                    </li>
-                                    {# <li><a href="gallery.html">Elektron kutubxona</a></li> #}
-                                    <li class="dropdown"><a href="index-2.html#">Kutubxona</a>
-                                        <ul>
-                                            <li><a href="events.html">Elektron resurslar</a></li>
-                                            <li><a href="event-single.html">Kitoblar</a></li>
-                                            <li><a href="event-single.html">Maqolalar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="index-2.html#">Art katalog</a>
-                                    	<ul>
-                                            <li><a href="blog.html">Rassomlar</a></li>
-                                            <li><a href="blog-single.html">Art ishlanmalar</a></li>
-                                        </ul>
-                                    </li>
-                                     <li class="dropdown"><a href="index-2.html#">Ilmiy Jurnal</a>
-                                        <ul>
-                                            <li><a href="events.html">Jurnal to'plamlari</a></li>
-                                            <li><a href="event-single.html">Arxiv</a></li>
-                                            <li><a href="event-single.html">Maqolalar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Qayta a'loqa</a></li>
+                              {% if staticMenu.menuItems %}                                    
+                                    {% partial staticMenu ~ "::items2" items=staticMenu.menuItems %}                                    
+                                {% endif %}  
                             </ul>
                         </div>
                     </nav><!-- Main Menu End-->

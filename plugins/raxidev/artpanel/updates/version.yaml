@@ -30,3 +30,6 @@
 1.0.11:
     - 'Created table raxidev_artpanel_slayder'
     - builder_table_create_raxidev_artpanel_slayder.php
+1.0.12:
+    - 'Created table raxidev_artpanel_about'
+    - builder_table_create_raxidev_artpanel_about.php
