@@ -30,3 +30,7 @@ navigation:
                 label: Xabarlar
                 url: raxidev/artpanel/xabarlar
                 icon: icon-newspaper-o
+            side-menu-item5:
+                label: Slayder
+                url: raxidev/artpanel/slayder
+                icon: icon-slack

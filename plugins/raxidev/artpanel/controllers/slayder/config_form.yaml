@@ -1,0 +1,10 @@
+name: Slayder
+form: $/raxidev/artpanel/models/slayder/fields.yaml
+modelClass: RaxiDev\ArtPanel\Models\Slayder
+defaultRedirect: raxidev/artpanel/slayder
+create:
+    redirect: 'raxidev/artpanel/slayder/update/:id'
+    redirectClose: raxidev/artpanel/slayder
+update:
+    redirect: raxidev/artpanel/slayder
+    redirectClose: raxidev/artpanel/slayder

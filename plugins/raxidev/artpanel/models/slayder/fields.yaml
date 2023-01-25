@@ -1,0 +1,50 @@
+fields:
+    title:
+        label: 'Slayder asosiy sarlavhasi'
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: 'Slayder sahifa manzili (Avtomatik kiritiladi)'
+        span: auto
+        required: 1
+        preset:
+            field: title
+            type: slug
+        type: text
+    mini_title:
+        label: 'Kichik slayder sarlafhasi'
+        span: auto
+        required: 1
+        type: text
+    url:
+        label: "URL manzil. Agar boshqa sahifaga yo'naltirilishi lozim bo'lsa"
+        span: auto
+        type: text
+    is_active:
+        label: Aktivligi
+        span: auto
+        type: switch
+    created_at:
+        label: 'Slayderni yaratilgan sanasi'
+        mode: datetime
+        span: auto
+        type: datepicker
+    image:
+        label: 'Slayderni suratini yuklash'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
+tabs:
+    fields:
+        content:
+            label: 'Asosiy qism'
+            size: huge
+            span: full
+            type: richeditor
+            tab: 'Asosiy qism'

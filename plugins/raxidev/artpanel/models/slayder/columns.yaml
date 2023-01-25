@@ -1,0 +1,26 @@
+columns:
+    title:
+        label: 'Slayd asosiy sarlavhasi'
+        type: text
+        searchable: true
+        sortable: true
+    url:
+        label: 'url manzil'
+        type: text
+        default: "Tashqi URL yo'q!"
+        searchable: true
+    is_active:
+        label: Aktivligi
+        type: switch
+        searchable: true
+    created_at:
+        label: 'Yaratilgan sana'
+        type: datetime
+        searchable: true
+        sortable: true
+    user_id:
+        label: 'Yaratgan admin'
+        type: text
+        searchable: true
+        select: "concat(first_name, ' ', last_name)"
+        relation: user
