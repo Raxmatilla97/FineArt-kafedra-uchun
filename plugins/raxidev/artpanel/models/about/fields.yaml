@@ -7,15 +7,6 @@ fields:
         label: 'Kichik sarlavha'
         span: auto
         type: text
-    about_kafedra:
-        label: 'Kafedra haqida qisqacha'
-        size: ''
-        span: auto
-        type: textarea
-    about_news:
-        label: 'Yangiliklar mazmuni haqida qisqacha'
-        span: auto
-        type: textarea
     button:
         label: "Ko'proq o'qish tugmasi URL manzili"
         span: auto
@@ -28,3 +19,13 @@ fields:
         label: Aktivligi
         span: auto
         type: switch
+    about_kafedra:
+        label: 'Kafedra haqida qisqacha'
+        size: large
+        span: auto
+        type: richeditor
+    about_news:
+        label: 'Yangiliklar mazmuni haqida qisqacha'
+        size: large
+        span: auto
+        type: richeditor

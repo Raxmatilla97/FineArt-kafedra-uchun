@@ -32,6 +32,17 @@ fields:
         span: auto
         required: 1
         type: datepicker
+    image:
+        label: 'Xabarning suratini yuklash'
+        mode: image
+        imageWidth: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
 tabs:
     fields:
         content:

@@ -30,6 +30,8 @@ class Xabarlar extends Model
     // Agar formada surat yoki fayl yuklash kerak bo'lsa shu metod orqali uni amalga oshirish mumkin
     public $attachOne = [        
         'file' => ['System\Models\File'],
+        'image' => ['System\Models\File'],
+
     ];
 
 
