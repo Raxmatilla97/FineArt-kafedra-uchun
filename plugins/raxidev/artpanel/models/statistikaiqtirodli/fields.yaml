@@ -1,0 +1,104 @@
+fields:
+    title:
+        label: Nomlanishi
+        span: auto
+        type: text
+    is_active:
+        label: Aktivligi
+        span: auto
+        type: switch
+    kotta_title:
+        label: 'Kotta sarlavha'
+        span: auto
+        type: text
+    kichik_title:
+        label: 'Kichik sarlavha'
+        span: auto
+        type: text
+tabs:
+    fields:
+        statistika_image:
+            label: 'Statistik surat yuklash'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: fileupload
+            tab: Statistika
+        statistika:
+            label: "Statistika ko'rinishi"
+            prompt: "Yangi statistika qo'shish"
+            maxItems: '4'
+            style: default
+            span: full
+            type: repeater
+            tab: Statistika
+            form:
+                fields:
+                    icon:
+                        label: 'Statistikani Iconini yuklash'
+                        mode: image
+                        imageWidth: '200'
+                        span: auto
+                        type: mediafinder
+                    statistika_raqami:
+                        label: 'Statistika raqami'
+                        span: auto
+                        type: text
+                    statistika_desc:
+                        label: 'Statistika haqida'
+                        size: small
+                        span: full
+                        type: textarea
+        student_image:
+            label: 'Fon suratni yuklash'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Iqtidorli talabalar'
+        talabalar:
+            label: 'Iqtidorli talabalar'
+            prompt: "Yangi iqtidorli talabani qo'shish"
+            maxItems: '10'
+            style: default
+            span: full
+            type: repeater
+            tab: 'Iqtidorli talabalar'
+            form:
+                fields:
+                    talaba_surati:
+                        label: 'Talaba suratini yuklash'
+                        mode: image
+                        prompt: 'Surat yuklash'
+                        imageWidth: '200'
+                        span: auto
+                        type: mediafinder
+                    fish:
+                        label: 'Ism familyasi'
+                        span: auto
+                        type: text
+                    kursi:
+                        label: 'Qaysi kursligi'
+                        span: auto
+                        type: text
+                    talaba_haqida:
+                        label: 'Talaba haqida'
+                        size: large
+                        span: auto
+                        type: textarea
+                    yulduzlar:
+                        label: Yulduzlar
+                        options:
+                            1: 'Bir yulduzlik'
+                            2: 'Ikki yulduzlik'
+                            3: 'Uch yulduzlik'
+                            4: "To'rt yulduzlik"
+                            5: 'Besh yulduzlik'
+                        span: auto
+                        type: checkboxlist

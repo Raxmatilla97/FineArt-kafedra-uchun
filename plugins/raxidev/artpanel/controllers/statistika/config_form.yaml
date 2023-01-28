@@ -1,0 +1,10 @@
+name: Statistika
+form: $/raxidev/artpanel/models/statistikaiqtirodli/fields.yaml
+modelClass: RaxiDev\ArtPanel\Models\StatistikaIqtirodli
+defaultRedirect: raxidev/artpanel/statistika
+create:
+    redirect: 'raxidev/artpanel/statistika/update/:id'
+    redirectClose: raxidev/artpanel/statistika
+update:
+    redirect: raxidev/artpanel/statistika
+    redirectClose: raxidev/artpanel/statistika

@@ -1,63 +1,40 @@
+[builderList]
+modelClass = "RaxiDev\ArtPanel\Models\StatistikaIqtirodli"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% for record in records %}
+{% if record.is_active %}
+
 <section class="fact-testimonial-area">
     <div class="container">
         <div class="row">
             <div class="col-xl-6">
                 <div class="fact-counter-box">
-                    <div class="fact-counter-bg" style="background-image:url({{'assets/images/parallax-background/fact-counter-bg-bg.jpg'|theme }});"></div>
-                    <ul>
-                        <li class="single-fact-counter-style2 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <div class="icon">
-                                <img src="{{'assets/images/icon/fact-counter-1.png'|theme }}" alt="Icon">
-                            </div>
-                            <div class="count-box">
-                                <h1>
-                                    <span class="timer" data-from="1" data-to="356" data-speed="5000" data-refresh-interval="50">356</span>
-                                </h1>
-                            </div>
-                            <div class="title">
-                                <h3>Over Organized<br> Exhibitions</h3>
-                            </div>
-                        </li>
-                        <li class="single-fact-counter-style2 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="icon">
-                                <img src="{{'assets/images/icon/fact-counter-3.png'|theme }}" alt="Icon">
-                            </div>
-                            <div class="count-box">
-                                <h1>
-                                    <span class="timer" data-from="1" data-to="80" data-speed="5000" data-refresh-interval="50">80</span>
-                                </h1>
-                            </div>
-                            <div class="title">
-                                <h3>Multi media Exhibitions<br> with a Guide</h3>
-                            </div>
-                        </li>
-                        <li class="single-fact-counter-style2 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
-                            <div class="icon">
-                                <img src="{{'assets/images/icon/fact-counter-2.png'|theme }}" alt="Icon">
-                            </div>
-                            <div class="count-box">
-                                <h1>
-                                    <span class="timer" data-from="1" data-to="400" data-speed="5000" data-refresh-interval="50">400</span>
-                                </h1>
-                            </div>
-                            <div class="title">
-                                <h3>Unique Objects Around<br> the World</h3>
-                            </div>
-                        </li>
-                        <li class="single-fact-counter-style2 wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1500ms">
-                            <div class="icon">
-                                <img src="{{'assets/images/icon/fact-counter-4.png'|theme }}" alt="Icon">
-                            </div>
-                            <div class="count-box">
-                                <h1>
-                                    <span class="timer" data-from="1" data-to="4648" data-speed="5000" data-refresh-interval="50">4,648</span>
-                                </h1>
-                            </div>
-                            <div class="title">
-                                <h3>Tickets Sold by our<br> Organization</h3>
-                            </div>
-                        </li>
-                        
+                
+                    <div class="fact-counter-bg" style="background-image:url({{ record.statistika_image.path }});"></div>
+                    <ul>                  
+                        {% for statistika in record.statistika %}
+                            <li class="single-fact-counter-style2 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+                                <div class="icon">
+                                    <img src="{{statistika.icon|media}}" alt="Icon">
+                                </div>
+                                <div class="count-box">
+                                    <h1>
+                                        <span class="timer" data-from="1" data-to="{{statistika.statistika_raqami}}" data-speed="5000" data-refresh-interval="50">{{record.statistika.statistika_raqami}}</span>
+                                    </h1>
+                                </div>
+                                <div class="title">
+                                    <h3>{{statistika.statistika_desc}}</h3>
+                                </div>
+                            </li>
+                        {% endfor %}                       
                     </ul>
                 </div>
             </div>
@@ -65,86 +42,41 @@
             <div class="col-xl-6">
                 <div class="testimonial-box-holder">
                     <div class="sec-title clr-white">
-                        <p>Testimonials</p>
-                        <div class="big-title"><h1>What Clients Say</h1></div>
+                        <p>{{record.kichik_title}}</p>
+                        <div class="big-title"><h1>{{record.kotta_title}}</h1></div>
+                        
                     </div>
-                    <div class="testimonial-box-holder-bg" style="background-image:url({{'assets/images/parallax-background/testimonial-box-holder-bg.jpg'|theme }});"></div>
+                    <div class="testimonial-box-holder-bg" style="background-image:url({{ record.student_image.path }});"></div>
                     <div class="testimonial-carousel-style2 style3 owl-carousel owl-theme">
-                        <!--Start single testimonial style2-->
+                       
+                       {% for student in record.talabalar %}
+                     
+                       <!--Start single testimonial style2-->
                         <div class="single-testimonial-style2">
                             <div class="top">
                                 <div class="img-box">
-                                    <img src="{{'assets/images/testimonial/tes-v2-1.png'|theme }}" alt="Awesome Image">    
+                                    <img src="{{student.talaba_surati|media}}" alt="Awesome Image">    
                                 </div>
                                 <div class="title-box">
-                                    <span>Organization</span>
-                                    <h2>Rachel Azark</h2>
+                                    <span>{{student.kursi}}</span>
+                                    <h2>{{student.fish}}</h2>
                                     <div class="review-box">
                                         <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
+                                           {% for test in student.yulduzlar %}
+                                                <li><i class="fa fa-star"></i></li>
+                                           {% endfor %}  
                                         </ul>
                                     </div>
                                 </div>
                             </div> 
                             <div class="text">
-                                <p>This might be my most favorite museum in Chicago. [MSI has] done a lot to take it beyond the '80s style exhibits into more,  flashy 21st century displays.</p>
+                                <p>{{student.talaba_haqida}}</p>
                             </div>   
                         </div> 
                         <!--End single testimonial style2-->
-                        <!--Start single testimonial style2-->
-                        <div class="single-testimonial-style2">
-                            <div class="top">
-                                <div class="img-box">
-                                    <img src="{{'assets/images/testimonial/tes-v2-1.png'|theme }}" alt="Awesome Image">    
-                                </div>
-                                <div class="title-box">
-                                    <span>Organization</span>
-                                    <h2>Rachel Azark</h2>
-                                    <div class="review-box">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="text">
-                                <p>This might be my most favorite museum in Chicago. [MSI has] done a lot to take it beyond the '80s style exhibits into more,  flashy 21st century displays.</p>
-                            </div>   
-                        </div> 
-                        <!--End single testimonial style2-->   
-                        <!--Start single testimonial style2-->
-                        <div class="single-testimonial-style2">
-                            <div class="top">
-                                <div class="img-box">
-                                    <img src="{{'assets/images/testimonial/tes-v2-1.png'|theme }}" alt="Awesome Image">    
-                                </div>
-                                <div class="title-box">
-                                    <span>Organization</span>
-                                    <h2>Rachel Azark</h2>
-                                    <div class="review-box">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="text">
-                                <p>This might be my most favorite museum in Chicago. [MSI has] done a lot to take it beyond the '80s style exhibits into more,  flashy 21st century displays.</p>
-                            </div>   
-                        </div> 
-                        <!--End single testimonial style2-->      
+                        
+                       {% endfor %}
+                      
                     </div>    
                 </div>    
             </div>
@@ -152,3 +84,5 @@
         </div>
     </div>    
 </section>
+{% endif %}
+{% endfor %}

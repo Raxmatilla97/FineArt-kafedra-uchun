@@ -23,7 +23,7 @@ sortDirection = "desc"
                         <div class="single-exhibition-box-style3">
                             <div class="img-holder">
                                 <div class="inner">
-                                    <img src="{{record.image.path}}" alt="{{record.title}}">
+                                    <img src="{{record.image.path| resize(370,500, { mode:'crop', quality: '80' })}}" alt="{{record.title}}">
                                     <div class="overlay-style-one bg1"></div>
                                 </div>
                                 <div class="text-box">

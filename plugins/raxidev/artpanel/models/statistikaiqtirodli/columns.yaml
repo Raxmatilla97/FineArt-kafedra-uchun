@@ -1,0 +1,22 @@
+columns:
+    title:
+        label: Nomlanishi
+        type: text
+        searchable: true
+    kichik_title:
+        label: 'Kichik sarlavha'
+        type: text
+        searchable: true
+    kotta_title:
+        label: 'Kotta sarlavha'
+        type: text
+    is_active:
+        label: Aktivligi
+        type: switch
+    created_at:
+        label: 'Yaratilgan vaqt'
+        type: datetime
+        sortable: true
+    updated_at:
+        label: updated_at
+        type: datetime

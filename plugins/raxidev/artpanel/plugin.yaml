@@ -38,3 +38,7 @@ navigation:
                 label: 'Biz haqimizda'
                 url: raxidev/artpanel/about
                 icon: icon-tablet
+            side-menu-item7:
+                label: 'Statistika va iqtidorli talabalar'
+                url: raxidev/artpanel/statistika
+                icon: icon-stack-overflow
