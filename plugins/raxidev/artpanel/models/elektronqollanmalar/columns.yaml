@@ -1,0 +1,23 @@
+columns:
+    title:
+        label: "ELektron qo'llanma nomi"
+        type: text
+        searchable: true
+    is_active:
+        label: Aktivligi
+        type: switch
+    user_id:
+        label: 'Kim yaratganligi'
+        type: number
+        select: "concat(first_name, ' ', last_name)"
+        relation: user
+    bolimlar:
+        label: "Bo'limi"
+        type: text
+    created_at:
+        label: 'Yaratilgan sana'
+        type: datetime
+        sortable: true
+    updated_at:
+        label: 'Yangilangan sana'
+        type: datetime

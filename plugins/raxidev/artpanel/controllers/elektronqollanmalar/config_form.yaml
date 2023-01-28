@@ -1,0 +1,10 @@
+name: ElektronQollanmalar
+form: $/raxidev/artpanel/models/elektronqollanmalar/fields.yaml
+modelClass: RaxiDev\ArtPanel\Models\ElektronQollanmalar
+defaultRedirect: raxidev/artpanel/elektronqollanmalar
+create:
+    redirect: 'raxidev/artpanel/elektronqollanmalar/update/:id'
+    redirectClose: raxidev/artpanel/elektronqollanmalar
+update:
+    redirect: raxidev/artpanel/elektronqollanmalar
+    redirectClose: raxidev/artpanel/elektronqollanmalar

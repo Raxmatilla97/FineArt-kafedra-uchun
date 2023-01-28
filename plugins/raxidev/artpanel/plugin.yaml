@@ -30,6 +30,10 @@ navigation:
                 label: Xabarlar
                 url: raxidev/artpanel/xabarlar
                 icon: icon-newspaper-o
+            side-menu-item8:
+                label: "Elektron qo'llanmalar"
+                url: raxidev/artpanel/elektronqollanmalar
+                icon: icon-bookmark
             side-menu-item5:
                 label: Slayder
                 url: raxidev/artpanel/slayder

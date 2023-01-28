@@ -1,0 +1,59 @@
+fields:
+    title:
+        label: "Elektron qo'llanmani nomlanishi"
+        span: auto
+        type: text
+    slug:
+        label: 'Sahifa manzili (avtomatik kiritiladi)'
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    is_active:
+        label: Aktivligi
+        span: auto
+        type: switch
+    bolimlar:
+        label: "Elektron qo'llanma bo'limi"
+        options:
+            el_qollanma: "Elektron qo'llanmalar"
+            krasvord: Krasvord
+            test: Test
+        showSearch: true
+        span: auto
+        type: dropdown
+    image:
+        label: "Elektron qo'llanmani suratini yuklash"
+        mode: image
+        imageWidth: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+tabs:
+    fields:
+        content:
+            label: 'Asosiy qism'
+            size: huge
+            span: full
+            type: richeditor
+            tab: 'Asosiy yozma qism'
+        file:
+            label: "Elektron qo'llanmani yuklash joyi"
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Fayllarni yuklash qismi'
+        url_html:
+            label: "Elektron qo'llanmani MediaFinderga yuklab keyin index.html ni ko'rsatish"
+            mode: file
+            span: auto
+            type: mediafinder
+            tab: 'Fayllarni yuklash qismi'
