@@ -30,8 +30,9 @@ class StatistikaIqtirodli extends Model
         'icon' => ['System\Models\File'],
         'statistika_image' => ['System\Models\File'],
         'student_image' => ['System\Models\File'],
-        
+
 
     ];
+
     
 }
