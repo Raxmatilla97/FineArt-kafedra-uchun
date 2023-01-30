@@ -18,3 +18,15 @@
 1.0.7:
     - 'Updated table raxidev_artkatalog_artwork'
     - builder_table_update_raxidev_artkatalog_artwork.php
+1.0.8:
+    - 'Updated table raxidev_artkatalog_artists'
+    - builder_table_update_raxidev_artkatalog_artists_2.php
+1.0.9:
+    - 'Updated table raxidev_artkatalog_artists'
+    - builder_table_update_raxidev_artkatalog_artists_3.php
+1.0.10:
+    - 'Updated table raxidev_artkatalog_artists'
+    - builder_table_update_raxidev_artkatalog_artists_4.php
+1.0.11:
+    - 'Updated table raxidev_artkatalog_artists'
+    - builder_table_update_raxidev_artkatalog_artists_5.php

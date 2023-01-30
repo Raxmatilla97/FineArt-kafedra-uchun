@@ -26,7 +26,7 @@ class Artwork extends Model
     //Agar modelda biron tablitsiyaga relation ishlatish kerak bo'lsa uni shu metod orqali bajariladi
     public $belongsTo = [
        'artists' => \RaxiDev\ArtKatalog\Models\Artists::class,
-       'category' => \RaxiDev\ArtKatalog\Models\Artists::class
+       'category' => \RaxiDev\ArtKatalog\Models\Category::class
     ];
 
     // Agar formada surat yuklash kerak bo'lsa shu metod orqali uni amalga oshirish mumkin
