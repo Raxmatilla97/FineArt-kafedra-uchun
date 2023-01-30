@@ -17,9 +17,9 @@ fields:
     bolimlar:
         label: "Elektron qo'llanma bo'limi"
         options:
-            el_qollanma: "Elektron qo'llanmalar"
-            krasvord: Krasvord
-            test: Test
+            "Elektron qo'llanmalar": "Elektron qo'llanmalar"
+            Krasvord: Krasvord
+            Test: Test
         showSearch: true
         span: auto
         type: dropdown
