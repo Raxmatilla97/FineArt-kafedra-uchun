@@ -1,0 +1,10 @@
+name: Jurnallar
+form: $/raxmatillaf/jurnallar/models/jurnallar/fields.yaml
+modelClass: RaxmatillaF\Jurnallar\Models\Jurnallar
+defaultRedirect: raxmatillaf/jurnallar/jurnallar
+create:
+    redirect: 'raxmatillaf/jurnallar/jurnallar/update/:id'
+    redirectClose: raxmatillaf/jurnallar/jurnallar
+update:
+    redirect: raxmatillaf/jurnallar/jurnallar
+    redirectClose: raxmatillaf/jurnallar/jurnallar

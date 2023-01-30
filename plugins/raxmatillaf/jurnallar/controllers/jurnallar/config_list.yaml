@@ -1,0 +1,16 @@
+list: $/raxmatillaf/jurnallar/models/jurnallar/columns.yaml
+modelClass: RaxmatillaF\Jurnallar\Models\Jurnallar
+title: Jurnallar
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'raxmatillaf/jurnallar/jurnallar/update/:id'
+defaultSort:
+           column: created_at
+           direction: desc
+      

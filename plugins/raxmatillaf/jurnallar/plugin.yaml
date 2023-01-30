@@ -1,0 +1,29 @@
+plugin:
+    name: 'raxmatillaf.jurnallar::lang.plugin.name'
+    description: 'raxmatillaf.jurnallar::lang.plugin.description'
+    author: 'Raxmatilla Fayziyev'
+    icon: oc-icon-archive
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Jurnallarni boshqarish'
+        url: raxmatillaf/jurnallar/jurnallar
+        icon: icon-archive
+        permissions: {  }
+        sideMenu:
+            side-menu-item:
+                label: Jurnallar
+                url: raxmatillaf/jurnallar/jurnallar
+                icon: icon-suitcase
+                permissions:
+                    - 'Jurnallar sahifasi'
+            side-menu-item2:
+                label: 'Jurnal to''plamlari'
+                url: raxmatillaf/jurnallar/toplamlar
+                icon: icon-sitemap
+                permissions:
+                    - 'Jurnal to''plamlari sahifasi'
+            side-menu-item3:
+                label: Sohalar
+                url: raxmatillaf/jurnallar/sohalar
+                icon: icon-skyatlas

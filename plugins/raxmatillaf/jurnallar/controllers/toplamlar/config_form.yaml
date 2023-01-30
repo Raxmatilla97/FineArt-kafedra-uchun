@@ -1,0 +1,10 @@
+name: Toplamlar
+form: $/raxmatillaf/jurnallar/models/toplamlar/fields.yaml
+modelClass: RaxmatillaF\Jurnallar\Models\Toplamlar
+defaultRedirect: raxmatillaf/jurnallar/toplamlar
+create:
+    redirect: 'raxmatillaf/jurnallar/toplamlar/update/:id'
+    redirectClose: raxmatillaf/jurnallar/toplamlar
+update:
+    redirect: raxmatillaf/jurnallar/toplamlar
+    redirectClose: raxmatillaf/jurnallar/toplamlar

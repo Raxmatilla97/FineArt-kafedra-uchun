@@ -1,0 +1,13 @@
+columns:
+    title:
+        label: 'Jurnal nomi'
+        type: text
+        searchable: true
+    created_at:
+        label: 'Joylangan sana'
+        type: date
+        sortable: true
+    status:
+        label: Activlik
+        type: switch
+       

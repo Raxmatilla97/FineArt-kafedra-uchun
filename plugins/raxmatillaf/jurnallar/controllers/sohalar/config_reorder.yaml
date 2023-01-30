@@ -1,0 +1,4 @@
+title: Sohalar
+modelClass: RaxmatillaF\Jurnallar\Models\Sohalar
+toolbar:
+    buttons: reorder_toolbar

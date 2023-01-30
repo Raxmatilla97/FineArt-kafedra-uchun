@@ -1,0 +1,4 @@
+title: Toplamlar
+modelClass: RaxmatillaF\Jurnallar\Models\Toplamlar
+toolbar:
+    buttons: reorder_toolbar

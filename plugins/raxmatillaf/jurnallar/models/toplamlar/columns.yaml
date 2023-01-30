@@ -1,0 +1,14 @@
+columns:
+    title:
+        label: 'To''plam nomlanishi'
+        type: text
+        searchable: true
+    created_at:
+        label: 'Yaratilgan sana'
+        type: date
+        searchable: false
+        sortable: true
+    image:
+        label: Surati
+        type: image
+

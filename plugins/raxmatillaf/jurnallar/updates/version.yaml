@@ -1,0 +1,125 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table raxmatillaf_jurnallar_toplami'
+    - builder_table_create_raxmatillaf_jurnallar_toplami.php
+1.0.3:
+    - 'Updated table raxmatillaf_jurnallar_toplami'
+    - builder_table_update_raxmatillaf_jurnallar_toplami.php
+1.0.4:
+    - 'Updated table raxmatillaf_jurnallar_toplami'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal.php
+1.0.5:
+    - 'Created table raxmatillaf_jurnallar_toplam'
+    - builder_table_create_raxmatillaf_jurnallar_toplam.php
+1.0.6:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_2.php
+1.0.7:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_3.php
+1.0.8:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_4.php
+1.0.9:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_5.php
+1.0.10:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_6.php
+1.0.11:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_7.php
+1.0.12:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_8.php
+1.0.13:
+    - 'Updated table raxmatillaf_jurnallar_toplam'
+    - builder_table_update_raxmatillaf_jurnallar_toplam.php
+1.0.14:
+    - 'Updated table raxmatillaf_jurnallar_toplam'
+    - builder_table_update_raxmatillaf_jurnallar_toplam_2.php
+1.0.15:
+    - 'Updated table raxmatillaf_jurnallar_toplam'
+    - builder_table_update_raxmatillaf_jurnallar_toplam_3.php
+1.0.16:
+    - 'Updated table raxmatillaf_jurnallar_toplam'
+    - builder_table_update_raxmatillaf_jurnallar_toplam_4.php
+1.0.17:
+    - 'Updated table raxmatillaf_jurnallar_toplam'
+    - builder_table_update_raxmatillaf_jurnallar_toplam_5.php
+1.0.18:
+    - 'Updated table raxmatillaf_jurnallar_toplam'
+    - builder_table_update_raxmatillaf_jurnallar_toplam_6.php
+1.0.19:
+    - 'Updated table raxmatillaf_jurnallar_toplam'
+    - builder_table_update_raxmatillaf_jurnallar_toplam_7.php
+1.0.20:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_9.php
+1.0.21:
+    - 'Updated table raxmatillaf_jurnallar_toplam'
+    - builder_table_update_raxmatillaf_jurnallar_toplam_8.php
+1.0.22:
+    - 'Updated table raxmatillaf_jurnallar_toplam'
+    - builder_table_update_raxmatillaf_jurnallar_toplam_9.php
+1.0.23:
+    - 'Created table raxmatillaf_jurnallar_sohalar'
+    - builder_table_create_raxmatillaf_jurnallar_sohalar.php
+1.0.24:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_10.php
+1.0.25:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_11.php
+1.0.26:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_12.php
+1.0.27:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_13.php
+1.0.28:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_14.php
+1.0.29:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_15.php
+1.0.30:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_16.php
+1.0.31:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_17.php
+1.0.32:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_18.php
+1.0.33:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_19.php
+1.0.34:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_20.php
+1.0.35:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_21.php
+1.0.36:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_22.php
+1.0.37:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_23.php
+1.0.38:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_24.php
+1.0.39:
+    - 'Updated table raxmatillaf_jurnallar_toplam'
+    - builder_table_update_raxmatillaf_jurnallar_toplam_10.php
+1.0.40:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_25.php
+1.0.41:
+    - 'Updated table raxmatillaf_jurnallar_toplam'
+    - builder_table_update_raxmatillaf_jurnallar_toplam_11.php
+1.0.42:
+    - 'Updated table raxmatillaf_jurnallar_jurnal'
+    - builder_table_update_raxmatillaf_jurnallar_jurnal_26.php

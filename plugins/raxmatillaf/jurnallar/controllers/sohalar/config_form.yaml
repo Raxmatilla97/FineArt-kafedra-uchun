@@ -1,0 +1,10 @@
+name: Sohalar
+form: $/raxmatillaf/jurnallar/models/sohalar/fields.yaml
+modelClass: RaxmatillaF\Jurnallar\Models\Sohalar
+defaultRedirect: raxmatillaf/jurnallar/sohalar
+create:
+    redirect: 'raxmatillaf/jurnallar/sohalar/update/:id'
+    redirectClose: raxmatillaf/jurnallar/sohalar
+update:
+    redirect: raxmatillaf/jurnallar/sohalar
+    redirectClose: raxmatillaf/jurnallar/sohalar

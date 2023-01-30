@@ -1,0 +1,146 @@
+fields:
+    title:
+        label: 'Jurnalning nomlanishi'
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: 'Jurnal manzili'
+        span: auto
+        readOnly: 1
+        required: 1
+        preset:
+            field: title
+            type: slug
+        type: text
+    toplamlar:
+        label: 'Jurnal to''plami'
+        nameFrom: ''
+        descriptionFrom: description
+        select: title
+        span: auto
+        readOnly: 0
+        hidden: 0
+        required: 1
+        type: relation
+    image:
+        label: 'Jurnal muqova surati'
+        mode: image
+        imageWidth: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: right
+        type: fileupload
+    sohalar:
+        label: 'Maqola qaysi sohaga tegishliligini tanlang'
+        nameFrom: ''
+        descriptionFrom: description
+        select: title
+        span: auto
+        required: 1
+        type: relation
+    status:
+        label: 'Jurnal chop etilishga tayyormi?'
+        options:
+            - 'Yo''q jurnal hali tayyor emas!'
+            - 'Jurnal chop etishga tayyor!'
+        span: auto
+        default: '0'
+        cssClass: ''
+        disabled: 0
+        type: balloon-selector
+    keywords:
+        label: 'Kalit so''zlari'
+        mode: array
+        separator: comma
+        options:
+            - 'ta''lim'
+        customTags: true
+        useKey: false
+        span: full
+        required: 1
+        defaultFrom: title
+        type: taglist
+tabs:
+    fields:
+        abiut_cite_article:
+            label: 'Jurnal haqida qisqacha'
+            span: auto
+            size: large
+            type: richeditor
+            tab: 'Abstraksiya va Jurnal'
+        full_journal_pdf:
+            label: 'Jurnalni to''liq qismini yuklang'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            required: 1
+            type: fileupload
+            tab: 'Abstraksiya va Jurnal'
+        abstraksiya_pdf:
+            label: 'Abstraksiya pdf ni yuklash uchun'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: right
+            required: 0
+            cssClass: 'color: bisque;'
+            type: fileupload
+            tab: 'Abstraksiya va Jurnal'
+        iqtiboslar:
+            label: 'Generatsiya yaratish'
+            prompt: 'Formani yaratish tugmasi'
+            maxItems: '1'
+            style: default
+            span: full
+            type: repeater
+            tab: 'Iqtiboslar formasi'
+            form:
+                fields:
+                    authors_field:
+                        label: 'Mualliflar qo''shing'
+                        prompt: 'Yangi muallif qo''shish'
+                        style: default
+                        span: full
+                        type: repeater
+                        form:
+                            fields:
+                                first_name:
+                                    label: Ism
+                                    span: auto
+                                    type: text
+                                last_name:
+                                    label: Familyasi
+                                    span: auto
+                                    type: text
+                                middle_name:
+                                    label: Sharifi
+                                    span: auto
+                                    type: text
+                    url_dio:
+                        label: 'DOI manzili'
+                        span: full
+                        type: text
+        start_page:
+            label: 'Sahifasini boshlanishi'
+            span: auto
+            type: number
+            tab: 'Iqtiboslar formasi'
+        end_page:
+            label: 'Sahifasini tugashi'
+            span: auto
+            type: number
+            tab: 'Iqtiboslar formasi'
+        references:
+            label: 'Ro''yxatni kiriting'
+            size: huge
+            span: full
+            type: richeditor
+            tab: 'Adabiyotlar ro''yxati'

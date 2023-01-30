@@ -1,0 +1,9 @@
+columns:
+    title:
+        label: Nomlanishi
+        type: text
+        searchable: true
+    created_at:
+        label: 'Yaratilgan vaqti'
+        type: datetime
+        sortable: true

@@ -1,0 +1,70 @@
+fields:
+    title:
+        label: 'Jurnal to''plamini nomini yozing'
+        span: auto
+        attributes:
+            translatable: 'true'
+        type: text
+    slug:
+        label: 'To''plam manzili (avtomatik yaratiladi!)'
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    status_jurnal_qabul:
+        label: 'Jurnallar qabuli mavjudmi? (To''plam arxiv holatida bu belgi o''chiq bo''lishi kerak)'
+        span: auto
+        default: 1
+        required: 1
+        type: checkbox
+    status:
+        label: 'Chop etishga tayyormi? Agar to''plamni yashirib qo''yish kerak bo''lsa belgilamang!'
+        span: auto
+        type: checkbox
+    is_archive:
+        label: 'To''plam arxiv xolatidami? (Agar to''plam arxiv holatiga kirgizmoqchi bo''lsangiz belgilang!)'
+        span: auto
+        type: checkbox
+    image:
+        label: 'To''plam surati'
+        mode: image
+        imageWidth: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    full_pdf_doc:
+        label: 'Jurnal to''plamining to''liq holati'
+        mode: file
+        fileTypes: 'pdf, doc, docx'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+tabs:
+    fields:
+        full_content:
+            label: 'To''plamning asosiy qismi'
+            size: huge
+            span: full
+            attributes:
+                translatable: 'true'
+            type: richeditor
+            tab: 'To''plam asosiy qismi'
+        issue:
+            label: Issue
+            span: auto
+            required: 1
+            type: number
+            tab: 'Kichik parometr'
+        volume:
+            label: Volume
+            span: auto
+            required: 1
+            type: number
+            tab: 'Kichik parometr'

@@ -1,0 +1,23 @@
+fields:
+    title:
+        label: 'Sohaning nomi'
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: 'Soha URL manzili (Avtomatik kiritiladi)'
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    status:
+        label: 'Status (O''chiq bo''lsa ko''rinmaydi)'
+        span: auto
+        required: 1
+        type: checkbox
+    description:
+        label: 'Sohaga beriladigan qisqacha tasnifi (Agar kerak bo''lsa, bo''lmasam bo''sh qoldirilsin)'
+        size: large
+        span: full
+        type: textarea

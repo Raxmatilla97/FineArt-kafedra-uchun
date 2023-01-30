@@ -1,0 +1,12 @@
+list: $/raxmatillaf/jurnallar/models/sohalar/columns.yaml
+modelClass: RaxmatillaF\Jurnallar\Models\Sohalar
+title: Sohalar
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'raxmatillaf/jurnallar/sohalar/update/:id'
