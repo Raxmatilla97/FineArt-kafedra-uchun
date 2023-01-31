@@ -37,7 +37,7 @@ sortDirection = "desc"
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                 <div class="single-art-box">
                     <div class="img-holder">
-                        <img src="{{record.image.path}}" alt="{{record.title}}">
+                        <img class="zoom" src="{{record.image.path}}" alt="{{record.title}}">
                         <div class="overlay-content">
                             <div class="title"> 
                                 <h3><a href="#">{{ record.title }}</a></h3>
@@ -50,8 +50,9 @@ sortDirection = "desc"
                                <p style="color: #fff;">Rassom: <a href="#" style="color: #ffba00; margin: auto; width: 100px;">{{record.artists.fish|_}}</a></p>
                             </div>    
                             <div class="readmore-button">
-                                <a href="#">{{"Ko'rish"|_}}</a>
+                                <a id="button-trigger" href="{{record.image.path}}">{{"Ko'rish"|_}}</a>
                             </div>    
+
                         </div>
                     </div>    
                 </div>

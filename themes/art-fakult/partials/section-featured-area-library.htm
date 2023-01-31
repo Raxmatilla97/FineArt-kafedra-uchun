@@ -6,7 +6,7 @@ displayColumn = "title"
 noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
-recordsPerPage = 10
+recordsPerPage = 6
 pageNumber = "{{ :page }}"
 sortColumn = "created_at"
 sortDirection = "desc"
@@ -82,12 +82,14 @@ sortDirection = "desc"
                     <div class="title-box">
                         <div class="sec-title">
                             <p>{{"Library"|_}}</p>
-                            <div class="big-title"><h1>Bo'limlar</h1></div>
+                            <div class="big-title"><h1>{{"Bo'limlar"|_}}</h1></div>
                             <div class="row">
                             <div class="col-xl-12">
                                 <ul>
 
-                                    <li><a href="#">Middle Eastern Art</a></li>
+                                    <li><a href="#">{{"Elektron kitoblar"|_}}</a></li>
+                                    <li><a href="#">{{"Elektron resurslar"|_}}</a></li>
+                                    <li><a href="#">{{"Elektron maqolalar"|_}}</a></li>
                                   
                                 </ul>
                             </div>
@@ -98,22 +100,22 @@ sortDirection = "desc"
                         <div class="row">
                             <div class="col-xl-6">
                                 <ul>
-                                    <li><a href="#">Middle Eastern Art</a></li>
-                                    <li><a href="#">Artifacts and Antiquities</a></li>
-                                    <li><a href="#">Traditional Art</a></li>
-                                    <li><a href="#">Western & Non-Western cultures</a></li>
-                                    <li><a href="#">Photography</a></li>
-                                    <li><a href="#">Emerging Design</a></li>	
+                                {% for record in records %}
+                                    {% if record.is_active and record.bolimlar == "el-kitoblar" %}
+                                        <li><a href="#">{{ record.title }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                                   
                                 </ul>
                             </div>
                             <div class="col-xl-6">
                                 <ul>
-                                    <li><a href="#">East Asian Art</a></li>
-                                    <li><a href="#">War History</a></li>
-                                    <li><a href="#">Latin American Art</a></li>
-                                    <li><a href="#">Gardens</a></li>
-                                    <li><a href="#">20th Century Design</a></li>
-                                    <li><a href="#">Contemporary Design</a></li>
+                                {% for record in records %}
+                                {% if record.is_active and record.bolimlar == "el-boshqa-resurslar" %}
+                                    <li><a href="#">{{ record.title }}</a></li>
+                                {% endif %}
+                                {% endfor %}
+                                    
                                 </ul>
                             </div>
                         </div>    
