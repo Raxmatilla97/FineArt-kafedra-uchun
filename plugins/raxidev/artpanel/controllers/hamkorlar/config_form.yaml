@@ -1,0 +1,10 @@
+name: Hamkorlar
+form: $/raxidev/artpanel/models/hamkorlar/fields.yaml
+modelClass: RaxiDev\ArtPanel\Models\Hamkorlar
+defaultRedirect: raxidev/artpanel/hamkorlar
+create:
+    redirect: 'raxidev/artpanel/hamkorlar/update/:id'
+    redirectClose: raxidev/artpanel/hamkorlar
+update:
+    redirect: raxidev/artpanel/hamkorlar
+    redirectClose: raxidev/artpanel/hamkorlar

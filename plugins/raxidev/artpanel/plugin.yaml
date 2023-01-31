@@ -46,3 +46,7 @@ navigation:
                 label: 'Statistika va iqtidorli talabalar'
                 url: raxidev/artpanel/statistika
                 icon: icon-stack-overflow
+            side-menu-item9:
+                label: "Hamkorlar ro'yxati"
+                url: raxidev/artpanel/hamkorlar
+                icon: icon-user-secret

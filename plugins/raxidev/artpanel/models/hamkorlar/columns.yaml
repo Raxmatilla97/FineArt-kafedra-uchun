@@ -1,0 +1,16 @@
+columns:
+    title:
+        label: Nomi
+        type: text
+        searchable: true
+    url:
+        label: 'Tashqi manzili'
+        type: text
+        default: "Manzil yo'q!"
+    created_at:
+        label: 'Yaratilgan vaqt'
+        type: datetime
+        sortable: true
+    is_active:
+        label: Aktivligi
+        type: switch

@@ -1,0 +1,25 @@
+fields:
+    title:
+        label: 'Hamkor nomi'
+        span: auto
+        type: text
+    slug:
+        label: "Sahifaga yo'nalish"
+        span: auto
+        type: text
+    url:
+        label: "Tashqi saytga url manzil (agar bo'lsa)"
+        span: auto
+        type: text
+    is_active:
+        label: 'Hamkor aktivligi'
+        span: auto
+        type: switch
+tabs:
+    fields:
+        content:
+            label: "Asosiy ma'lumotlar"
+            size: large
+            span: full
+            type: richeditor
+            tab: 'Content qismi'
