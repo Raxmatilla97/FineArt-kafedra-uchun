@@ -14,6 +14,15 @@ fields:
         label: Aktivligi
         span: auto
         type: switch
+    bolimlar:
+        label: "Elektron resurs bo'limi"
+        options:
+            el-kitoblar: El-Kitoblar
+            el-maqolalar: El-maqolalar
+            el-boshqa-resurslar: 'El-boshqa resurslar'
+        showSearch: true
+        span: auto
+        type: dropdown
 tabs:
     fields:
         content:

@@ -48,3 +48,6 @@
 1.0.17:
     - 'Created table raxidev_artpanel_elektron_qollanmalar'
     - builder_table_create_raxidev_artpanel_elektron_qollanmalar.php
+1.0.18:
+    - 'Updated table raxidev_artpanel_library'
+    - builder_table_update_raxidev_artpanel_library.php

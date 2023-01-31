@@ -6,7 +6,7 @@ plugin:
     homepage: ''
 navigation:
     main-menu-item:
-        label: 'Jurnallarni boshqarish'
+        label: 'Art Jurnal'
         url: raxmatillaf/jurnallar/jurnallar
         icon: icon-archive
         permissions: {  }
@@ -18,11 +18,11 @@ navigation:
                 permissions:
                     - 'Jurnallar sahifasi'
             side-menu-item2:
-                label: 'Jurnal to''plamlari'
+                label: "Jurnal to'plamlari"
                 url: raxmatillaf/jurnallar/toplamlar
                 icon: icon-sitemap
                 permissions:
-                    - 'Jurnal to''plamlari sahifasi'
+                    - "Jurnal to'plamlari sahifasi"
             side-menu-item3:
                 label: Sohalar
                 url: raxmatillaf/jurnallar/sohalar
