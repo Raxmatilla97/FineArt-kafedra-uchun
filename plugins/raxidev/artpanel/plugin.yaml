@@ -11,11 +11,11 @@ navigation:
         icon: icon-bank
         sideMenu:
             side-menu-item:
-                label: 'Univer Rassomlari'
+                label: "O'qituvchilar ro'yxati"
                 url: raxidev/artpanel/rassomlar
                 icon: icon-users
             side-menu-item2:
-                label: 'Univer ART ishlanmalari'
+                label: "O'qituchilar ART ishlanmalari"
                 url: raxidev/artpanel/artishlanmalar
                 icon: icon-slack
             side-menu-item3:
