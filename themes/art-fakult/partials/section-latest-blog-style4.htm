@@ -1,0 +1,56 @@
+[builderList]
+modelClass = "RaxiDev\ArtPanel\Models\ElektronQollanmalar"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 5
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+==
+{% set records = builderList.records %}
+<!--Start latest blog Style4 area -->
+<section class="latest-blog-style4-area" style="padding: 120px 0 20px;">
+    <div class="container">
+        <div class="sec-title text-center">
+            <p>{{"Kafedra tomonidan yaratilgan"|_}}</p>
+            <div class="big-title"><h1>{{"ELektron O'quv Qo'llanmalar"|_}}</h1></div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="blog-carousel-style3 owl-carousel owl-theme owl-nav-style-one">
+                    {% for record in records %}
+                    {% if record.is_active %}
+                        <!--Start single blog post-->
+                        <div class="single-blog-post-style2 style3 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="img-holder">
+                                <div class="inner">
+                                    <img src="{{record.image.path| resize(470,406, { mode:'crop', quality: '60' })}}" alt="{{record.title}}">
+                                    <div class="overlay-style-one bg1"></div>
+                                </div>
+                                <div class="title-holder">
+                                    <ul class="meta-info">
+                                        <li>{{record.created_at|date('d-M-Y')}}</li>
+                                        <li>{{record.bolimlar}}</li>
+                                    </ul>
+                                    <h3 class="blog-title"><a href="#">{{record.title}}</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End single blog post--> 
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                
+                <div class="view-more-button text-center">
+                    <a class="btn-two" href="#">{{"Ko'proq ko'rish"|_}}</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!--End latest blog Style4 area-->

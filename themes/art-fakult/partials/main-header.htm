@@ -1,0 +1,96 @@
+[staticMenu]
+code = "asosiy-menyu"
+==
+<header class="main-header main-header-style2">    
+    <!--Start Header upper Style2-->
+    <div class="header-upper-style2">
+        <div class="header-upper-style2-container clearfix">
+            <div class="outer-box clearfix"> 
+                <div class="header-upper-left-style2 clearfix float-left">
+                    <div class="logo">
+                        <a href="index.html"><img src="{{ 'assets/images/resources/logo-2.png'|theme }}" alt="Awesome Logo" title=""></a>
+                    </div>
+                </div>
+                <div class="header-upper-midlle-style2 float-left clearfix">
+                    <div class="nav-outer clearfix">
+                        <!-- Main Menu -->
+                        <nav class="main-menu style2 navbar-expand-lg">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->      
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">                               
+                                {% if staticMenu.menuItems %}                                    
+                                    {% partial staticMenu ~ "::items2" items=staticMenu.menuItems %}                                    
+                                {% endif %}                                 
+                                </ul>
+                            </div>
+                        </nav>                        
+                        <!-- Main Menu End-->
+                        <div class="menu-right-content-style2">
+                            <div class="user-icon-holder">
+                                <a href="index-2.html#"><span class="flaticon-user"></span></a>
+                            </div>
+                            <div class="outer-search-box-style1">
+                                <div class="seach-toggle"><i class="fa fa-search"></i></div>
+                                <ul class="search-box">
+                                    <li>
+                                        <form method="post" action="index.html">
+                                            <div class="form-group">
+                                                <input type="search" name="search" placeholder="Saydan qidirish" required>
+                                                <button type="submit"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                          
+                        </div>
+
+                    </div>
+                </div>
+                <div class="header-upper-right-style2 float-right clearfix">
+                    <a class="side-nav-toggler nav-toggler hidden-bar-opener" href="index-2.html#">
+                        <span class="decor1"></span>
+                        <span class="decor2"></span>
+                        <span class="decor3"></span>
+                    </a>     
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--End Header Upper Style2-->
+   
+    <!--Sticky Header-->
+    <div class="sticky-header">
+        <div class="container">
+            <div class="clearfix">
+                <!--Logo-->
+                <div class="logo float-left">
+                    <a href="index.html" class="img-responsive"><img src="{{ 'assets/images/resources/logo.png'|theme }}" alt="" title=""></a>
+                </div>
+                <!--Right Col-->
+                <div class="right-col float-right">
+                    <!-- Main Menu -->
+                    <nav class="main-menu navbar-expand-lg">
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                              {% if staticMenu.menuItems %}                                    
+                                    {% partial staticMenu ~ "::items2" items=staticMenu.menuItems %}                                    
+                                {% endif %}  
+                            </ul>
+                        </div>
+                    </nav><!-- Main Menu End-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Sticky Header-->
+</header>

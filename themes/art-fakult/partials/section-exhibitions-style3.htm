@@ -1,0 +1,43 @@
+[builderList]
+modelClass = "RaxiDev\ArtPanel\Models\Xabarlar"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 6
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+==
+{% set records = builderList.records %}
+<section class="exhibitions-style3-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="exhibitions-carousel-style2 owl-carousel owl-theme owl-nav-style-one">
+                    {% for record in records %}
+                    {% if record.is_active %}
+                        <!--Start Single Exhibition Box Style3-->
+                        <div class="single-exhibition-box-style3">
+                            <div class="img-holder">
+                                <div class="inner">
+                                    <img src="{{record.image.path| resize(370,500, { mode:'crop', quality: '80' })}}" alt="{{record.title}}">
+                                    <div class="overlay-style-one bg1"></div>
+                                </div>
+                                <div class="text-box">
+                                    <span>{{record.bolimlar}}</span>
+                                    <h3><a href="{{record.slug}}">{{record.title}}</a></h3>
+                                    <p>{{record.created_at|date("d-M-Y")}}</p>    
+                                </div>
+                            </div>    
+                        </div>
+                        <!--End Single Exhibition Box Style3-->
+                    {% endif %}
+                    {% endfor %}                    
+                </div>                
+            </div>
+        </div>
+    </div>    
+</section>
