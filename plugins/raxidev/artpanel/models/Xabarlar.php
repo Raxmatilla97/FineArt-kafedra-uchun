@@ -34,6 +34,11 @@ class Xabarlar extends Model
 
     ];
 
+    public $attachMany = [        
+        'gallereya_images' => ['System\Models\File']        
+
+    ];
+
 
      // Agar slug ga avtomatik i++ son qo'shilishini istasak pastdagi metod yoziladi
     protected $slugs = ['slug' => 'title'];
@@ -54,6 +59,15 @@ class Xabarlar extends Model
 
     public $belongsTo = ['user'=>'Backend\Models\User'];
 
+    // Nechta odam ko'rganini hisoblash funksiyasi
+    public function increaseViewCount() {
+        $this->timestamps = false;
+        $this->increment('views_count');
+        $this->timestamps = true;
+    }
+        
+    
+    
 
 
 }

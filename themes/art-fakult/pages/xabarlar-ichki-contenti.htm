@@ -1,0 +1,303 @@
+url = "/xabarlar-ichki-contenti/:slug"
+layout = "dinamik-pagelar-uchun"
+title = "Xabarlar ichki contenti"
+
+[builderDetails]
+modelClass = "RaxiDev\ArtPanel\Models\Xabarlar"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Yangilik topilmadi!"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    {{ attribute(record, displayColumn) }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+<!--Start breadcrumb area-->     
+<section class="breadcrumb-area" style="background-image: url({{'assets/images/breadcrumb/breadcrumb-4.jpg'|theme}});">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content clearfix">
+                    <div class="title">
+                       <h1>
+                       {% if record.bolimlar == 'elon' %}
+                            {{"Kafedra e'loni"|_}}
+                       {% elseif  record.bolimlar == 'yangilik'%}
+                            {{"Kafedra yangiligi"|_}}
+                       {% endif %}
+                       
+                       </h1>
+                    </div>
+                    <div class="breadcrumb-menu">
+                        <ul class="clearfix">
+                            <li><a href="{{'/'}}">{{"Bosh sahifa"|_}}</a></li>
+                            <li><a href="{{'/'}}">{{"Xabarlar sahifasi"|_}}</a></li>
+                            <li class="active">{{record.title}}</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb area-->
+
+<!--Start blog single area-->
+<section class="blog-single-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-7 col-md-12 col-sm-12">
+                {% if record %}
+                    <div class="blog-post">
+                        <div class="blog-details-content">
+                            <div class="img-holder">
+                                <img src="{{record.image/path}}" alt="Awesome Image">
+                            </div>
+                            <div class="text-holder">
+                                <ul class="meta-info">
+                                    <li><a href="#">{{record.created_at|date("d, M - Y")}}</a></li>
+                                    <li><a href="#">{{record.user.full_name}}</a></li>
+                                    <li><a href="#">{{record.views_count}} - {{"Martda ko'rilgan"|_}}</a></li>
+                                </ul>
+                                <h2 class="blog-title">{{record.title}}</h2>
+                                <div class="text">
+                                    {{record.content|raw}}
+                                </div>
+                            </div>
+                            <div class="bottom-image-box">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="single-image-box">
+                                            <img src="images/blog/blog-single-2.jpg" alt="Awesome Image">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="single-image-box">
+                                            <img src="images/blog/blog-single-3.jpg" alt="Awesome Image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text text-center">
+                                    <p>{{"Xabarga qo'yilgan suratlar"|_}}</p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        
+                        <!--Start tag box-->
+                        <div class="tag-box">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="tag pull-left">
+                                        <p><span>Tags:</span> Art, Artist, Gallery, Collection</p>
+                                    </div>
+                                    <div class="right pull-right">
+                                        <p>Shear :</p>
+                                        <ul class="sociallinks-style-two float-left fix">
+                                            <li><a href="blog-single.html#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="blog-single.html#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="blog-single.html#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+                                            <li><a href="blog-single.html#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        </ul>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End tag box-->
+                        
+                        <!--Start comment box-->
+                        <div class="inner-comment-box">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="title">
+                                        <h3>02  Comments</h3>
+                                    </div>
+                                    <!--Start single comment box-->
+                                    <div class="single-comment-box">
+                                        <div class="img-holder">
+                                            <img src="images/blog/comment-1.png" alt="Awesome Image">
+                                        </div>
+                                        <div class="text-holder">
+                                            <div class="top">
+                                                <div class="name">
+                                                    <h3>Manal Luan <span class="date">February 25, 2019</span></h3>
+                                                </div>
+                                                <div class="reply-button">
+                                                    <a href="blog-single.html#">Reply</a>
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <p>Jelly-o marzipan dragée pudding. Gingerbread macaroon danish chocolate top toffee candy danish chocolate these bar wafer.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--End single comment box-->
+                                    <!--Start single comment box-->
+                                    <div class="single-comment-box marleft100">
+                                        <div class="img-holder">
+                                            <img src="images/blog/comment-2.png" alt="Awesome Image">
+                                        </div>
+                                        <div class="text-holder">
+                                            <div class="top">
+                                                <div class="name">
+                                                    <h3>Rahila Moba <span class="date">February 25, 2019</span></h3>
+                                                </div>
+                                                <div class="reply-button">
+                                                    <a href="blog-single.html#">Reply</a>
+                                                </div>
+                                            </div>
+                                            <div class="text">
+                                                <p>Jelly-o marzipan dragée pudding. Gingerbread macaroon danish chocolate top toffee candy danish hocolate these bar wafer.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--End single comment box-->
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <!--End comment box-->
+                        
+                        <!--Start add comment box-->
+                        <div class="add-comment-box">
+                            <div class="title">
+                                <h3>Leave a Comment</h3>
+                            </div>
+                            <form id="add-comment-form" action="blog-single.html#">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input type="text" name="fname" value="" placeholder="Full Name" required="">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="email" name="form_email" value="" placeholder="Email" required="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <textarea name="message" placeholder="Your Message" required=""></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button class="btn-one" type="submit">Send Message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!--End add comment box-->
+                    </div>
+                {% else %}
+                    {{ notFoundMessage }}
+                {% endif %}
+            </div>
+            
+            <!--Start sidebar Wrapper-->
+            <div class="col-xl-4 col-lg-5 col-md-9 col-sm-12">
+                <div class="sidebar-wrapper">
+                    <!--Start single sidebar-->
+                    <div class="sidebar-search-box">
+                        <form class="search-form" action="blog-single.html#">
+							<input placeholder="Search" type="text">
+							<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</form>
+                    </div>
+                    <!--End single sidebar-->
+                    <!--Start single sidebar-->
+                    <div class="single-sidebar">
+                        <div class="title">
+                            <h3>Categories</h3>
+                        </div>
+                        <ul class="categories clearfix">
+                            <li><a href="blog-single.html#">Collections</a></li>
+                            <li><a href="blog-single.html#">Exhibitions</a></li>
+                            <li><a href="blog-single.html#">People</a></li>
+                            <li><a href="blog-single.html#">Press Release</a></li>
+                            <li><a href="blog-single.html#">Programs</a></li>
+                        </ul>
+                    </div>
+                    <!--End single sidebar-->
+                    <!--Start single sidebar-->
+                    <div class="single-sidebar">
+                        <div class="title">
+                            <h3>Recent Posts</h3>
+                        </div>
+                        <div class="recent-post">
+                            <div class="recent-post-carousel owl-carousel owl-theme owl-nav-style-one">
+                                <!--Start Single Recent Post -->
+                                <div class="single-recent-post">
+                                    <div class="img-holder">
+                                        <img src="images/sidebar/recent-post-1.jpg" alt="Awesome Image">
+                                        <div class="overlay-style-one bg1"></div>
+                                    </div>
+                                    <div class="title-holder text-center">
+                                        <p>March 25, 2019</p>
+                                        <h3><a href="blog-single.html#">Scenes from Stepan Hawkin’s World</a></h3>
+                                    </div>    
+                                </div>
+                                <!--End Single Recent Post -->
+                                <!--Start Single Recent Post -->
+                                <div class="single-recent-post">
+                                    <div class="img-holder">
+                                        <img src="images/sidebar/recent-post-1.jpg" alt="Awesome Image">
+                                        <div class="overlay-style-one bg1"></div>
+                                    </div>
+                                    <div class="title-holder text-center">
+                                        <p>March 25, 2019</p>
+                                        <h3><a href="blog-single.html#">Scenes from Stepan Hawkin’s World</a></h3>
+                                    </div>    
+                                </div>
+                                <!--End Single Recent Post -->
+                            </div> 
+                        </div>
+                    </div>
+                    <!--End single sidebar-->
+                    
+                    <!--Start single sidebar-->
+                    <div class="single-sidebar">
+                        <div class="title">
+                            <h3>Archives</h3>
+                        </div>
+                        <ul class="archives clearfix">
+                            <li><a href="blog-single.html#">January 2020</a></li>
+                            <li><a href="blog-single.html#">December 2019</a></li>
+                            <li><a href="blog-single.html#">November 2019</a></li>
+                            <li><a href="blog-single.html#">October 2019</a></li>
+                        </ul>
+                    </div>
+                    <!--End single sidebar-->
+                    
+                    <!--Start single-sidebar-->
+                    <div class="single-sidebar last-child">
+                        <div class="title">
+                            <h3>Tags</h3>
+                        </div>
+                        <ul class="popular-tag">
+                            <li><a href="blog-single.html#">Art</a></li>
+                            <li><a href="blog-single.html#">Artist</a></li>
+                            <li><a href="blog-single.html#">Magazin</a></li>
+                            <li><a href="blog-single.html#">Author</a></li>
+                            <li><a href="blog-single.html#">Gallery</a></li>
+                            <li><a href="blog-single.html#">Collection</a></li>
+                            <li><a href="blog-single.html#">Publication</a></li>
+                        </ul>      
+                    </div> 
+                    <!--End single-sidebar-->
+                  
+                </div>    
+            </div>
+            <!--End Sidebar Wrapper-->
+            
+       </div>
+    </div>
+</section> 
+<!--End blog single area-->

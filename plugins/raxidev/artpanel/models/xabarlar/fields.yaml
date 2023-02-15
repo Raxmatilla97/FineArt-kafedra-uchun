@@ -45,6 +45,13 @@ fields:
         type: fileupload
 tabs:
     fields:
+        small_content:
+            label: 'Kichik qismchasi'
+            size: small
+            span: full
+            placeholder: 'Bir ikki gapdan iborat parcha yozing'
+            type: textarea
+            tab: 'Asosiy qism'
         content:
             label: 'Asosiy qism'
             size: huge
@@ -74,3 +81,13 @@ tabs:
                             extension: auto
                         span: auto
                         type: fileupload
+        gallereya_images:
+            label: 'Suratlarni yuklash'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: fileupload
+            tab: Gallereya

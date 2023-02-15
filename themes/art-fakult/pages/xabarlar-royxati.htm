@@ -1,0 +1,127 @@
+url = "/xabarlar-royxati/:page?"
+layout = "dinamik-pagelar-uchun"
+title = "Xabarlar ro'yxati"
+
+[builderList]
+modelClass = "RaxiDev\ArtPanel\Models\Xabarlar"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 9
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+<!--Start breadcrumb area-->     
+<section class="breadcrumb-area" style="background-image: url({{'assets/images/breadcrumb/breadcrumb-4.jpg'|theme}});">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content clearfix">
+                    <div class="title">
+                       <h1>{{"Voqealar"|_}}</h1>
+                    </div>
+                    <div class="breadcrumb-menu">
+                        <ul class="clearfix">
+                            <li><a href="{{'/'}}">{{"Bosh sahifa"}}</a></li>
+                            <li class="active">{{"Xabarlar ro'yxati"|_}}</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb area-->
+
+<!--Start latest blog Style3 area -->
+<section class="latest-blog-style3-area blog-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="top">
+                    <div class="sec-title pdbtm42 text-center">
+                        <p>KAFEDRADA YUZ BERAYOTGAN YANGILIKLAR</p>
+                        <div class="big-title"><h1>Yangiliklar & E'lonlar</h1></div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        {% for record in records %}
+        {% if record.is_active %}
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <!--Start single blog post-->
+                <div class="single-blog-post style3 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="img-holder">
+                        <img src="{{record.image.path| resize(370,320, { mode:'crop', quality: '60' })}}" alt="{{record.title}}">
+                        <div class="overlay-style-one bg1"></div>
+                    </div>
+                    <div class="text-holder">
+                        <div class="border-botton"></div>
+                        <div class="post-date">
+                            <span>{{record.created_at|date("d, M - Y")}}</span>
+                        </div>
+                        <h3 class="blog-title"><a href="{{'xabarlar-ichki-contenti'}}/{{record.slug}}">{{record.title}}</a></h3>
+                        <div class="text">{{record.small_content}}</div>
+                        <div class="button-box">
+                            <a href="{{'xabarlar-ichki-contenti'}}/{{record.slug}}">{{"O'qish"|_}}</a>
+                        </div>
+                    </div>
+                </div>
+                <!--End single blog post-->
+            </div>
+         {% endif %}
+        {% else %}
+            <li class="no-data">{{ noRecordsMessage }}</li>
+         {% endfor %}
+            
+        </div>
+        
+        <div class="row">
+            <div class="col-xl-12">
+                {# <ul class="styled-pagination text-center">
+                    <li class="prev"><a href="blog.html#"><span class="fa fa-angle-left"></span></a></li>
+                    <li class="count"><a href="blog.html#">1</a></li>
+                    <li class="count"><a href="blog.html#">2</a></li>
+                    <li class="count"><a href="blog.html#" class="active">3</a></li>
+                    <li class="count"><a href="blog.html#">4</a></li>
+                    <li class="count last"><a href="blog.html#">5</a></li>
+                    <li class="next"><a href="blog.html#"><span class="fa fa-angle-right"></span></a></li>
+                </ul> #}
+
+                 {% if records.lastPage > 1 %}
+                    <ul class="styled-pagination text-center" style="margin-bottom:50px;">
+                        {% if records.currentPage > 1 %}
+                            <li  class="prev"><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr;</a></li>
+                        {% endif %}
+
+                        {% for page in 1..records.lastPage %}
+                            <li class="count">
+                                <a class="{{ records.currentPage == page ? 'active' : null }}" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                            </li>
+                        {% endfor %}
+
+                        {% if records.lastPage > records.currentPage %}
+                            <li  class="next"><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">&rarr;</a></li>
+                        {% endif %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+
+       
+        
+    </div>
+</section>
+<!--End latest blog Style3 area-->
