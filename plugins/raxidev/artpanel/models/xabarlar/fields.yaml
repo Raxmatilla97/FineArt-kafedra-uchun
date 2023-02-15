@@ -43,6 +43,14 @@ fields:
         span: auto
         required: 1
         type: fileupload
+    tags:
+        label: 'Teglarni yozish'
+        mode: string
+        separator: comma
+        customTags: true
+        useKey: false
+        span: full
+        type: taglist
 tabs:
     fields:
         small_content:

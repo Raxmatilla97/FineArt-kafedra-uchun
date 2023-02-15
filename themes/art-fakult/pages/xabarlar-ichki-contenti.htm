@@ -8,6 +8,19 @@ identifierValue = "{{ :slug }}"
 modelKeyColumn = "slug"
 displayColumn = "title"
 notFoundMessage = "Yangilik topilmadi!"
+
+[builderList]
+modelClass = "RaxiDev\ArtPanel\Models\Xabarlar"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "Yangiliklar hali yo'q!"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 6
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
 ==
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
@@ -57,7 +70,7 @@ notFoundMessage = "Yangilik topilmadi!"
                     <div class="blog-post">
                         <div class="blog-details-content">
                             <div class="img-holder">
-                                <img src="{{record.image/path}}" alt="Awesome Image">
+                                <img class="zoom" src="{{record.image.path}}" alt="Awesome Image">
                             </div>
                             <div class="text-holder">
                                 <ul class="meta-info">
@@ -70,24 +83,23 @@ notFoundMessage = "Yangilik topilmadi!"
                                     {{record.content|raw}}
                                 </div>
                             </div>
+                            {% if record.gallereya_images %}
                             <div class="bottom-image-box">
                                 <div class="row">
+                                    {% for galereya in record.gallereya_images %}
                                     <div class="col-xl-6">
                                         <div class="single-image-box">
-                                            <img src="images/blog/blog-single-2.jpg" alt="Awesome Image">
+                                            <img class="zoom" src="{{galereya.path}}" alt="Awesome Image">
                                         </div>
                                     </div>
-                                    <div class="col-xl-6">
-                                        <div class="single-image-box">
-                                            <img src="images/blog/blog-single-3.jpg" alt="Awesome Image">
-                                        </div>
-                                    </div>
+                                    {% endfor %}
+
                                 </div>
                                 <div class="text text-center">
                                     <p>{{"Xabarga qo'yilgan suratlar"|_}}</p>
                                 </div>
                             </div>
-                           
+                          {% endif %}
                         </div>
                         
                         <!--Start tag box-->
@@ -95,106 +107,20 @@ notFoundMessage = "Yangilik topilmadi!"
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="tag pull-left">
-                                        <p><span>Tags:</span> Art, Artist, Gallery, Collection</p>
+                                        <p><span>{{"Teglar"|_}}:</span>{{ record.tags }}</p>
                                     </div>
                                     <div class="right pull-right">
-                                        <p>Shear :</p>
+                                        <p>{{"Tarqatish"|_}} :</p>
                                         <ul class="sociallinks-style-two float-left fix">
-                                            <li><a href="blog-single.html#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                            <li><a href="blog-single.html#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href="blog-single.html#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                                            <li><a href="blog-single.html#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                            <li><a href="https://www.facebook.com/sharer.php?u={{ this.page.id | page }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="https://twitter.com/intent/tweet?url={{ this.page.id | page }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ this.page.id | page }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                         </ul>  
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!--End tag box-->
-                        
-                        <!--Start comment box-->
-                        <div class="inner-comment-box">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="title">
-                                        <h3>02  Comments</h3>
-                                    </div>
-                                    <!--Start single comment box-->
-                                    <div class="single-comment-box">
-                                        <div class="img-holder">
-                                            <img src="images/blog/comment-1.png" alt="Awesome Image">
-                                        </div>
-                                        <div class="text-holder">
-                                            <div class="top">
-                                                <div class="name">
-                                                    <h3>Manal Luan <span class="date">February 25, 2019</span></h3>
-                                                </div>
-                                                <div class="reply-button">
-                                                    <a href="blog-single.html#">Reply</a>
-                                                </div>
-                                            </div>
-                                            <div class="text">
-                                                <p>Jelly-o marzipan dragée pudding. Gingerbread macaroon danish chocolate top toffee candy danish chocolate these bar wafer.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End single comment box-->
-                                    <!--Start single comment box-->
-                                    <div class="single-comment-box marleft100">
-                                        <div class="img-holder">
-                                            <img src="images/blog/comment-2.png" alt="Awesome Image">
-                                        </div>
-                                        <div class="text-holder">
-                                            <div class="top">
-                                                <div class="name">
-                                                    <h3>Rahila Moba <span class="date">February 25, 2019</span></h3>
-                                                </div>
-                                                <div class="reply-button">
-                                                    <a href="blog-single.html#">Reply</a>
-                                                </div>
-                                            </div>
-                                            <div class="text">
-                                                <p>Jelly-o marzipan dragée pudding. Gingerbread macaroon danish chocolate top toffee candy danish hocolate these bar wafer.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End single comment box-->
-                                   
-                                </div>
-                            </div>
-                        </div>
-                        <!--End comment box-->
-                        
-                        <!--Start add comment box-->
-                        <div class="add-comment-box">
-                            <div class="title">
-                                <h3>Leave a Comment</h3>
-                            </div>
-                            <form id="add-comment-form" action="blog-single.html#">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <input type="text" name="fname" value="" placeholder="Full Name" required="">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="email" name="form_email" value="" placeholder="Email" required="">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <textarea name="message" placeholder="Your Message" required=""></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <button class="btn-one" type="submit">Send Message</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!--End add comment box-->
                     </div>
                 {% else %}
                     {{ notFoundMessage }}
@@ -206,8 +132,8 @@ notFoundMessage = "Yangilik topilmadi!"
                 <div class="sidebar-wrapper">
                     <!--Start single sidebar-->
                     <div class="sidebar-search-box">
-                        <form class="search-form" action="blog-single.html#">
-							<input placeholder="Search" type="text">
+                        <form class="search-form" action="#">
+							<input placeholder="Qidirish" type="text">
 							<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 						</form>
                     </div>
@@ -215,84 +141,46 @@ notFoundMessage = "Yangilik topilmadi!"
                     <!--Start single sidebar-->
                     <div class="single-sidebar">
                         <div class="title">
-                            <h3>Categories</h3>
+                            <h3>{{"Bo'limlar"|_}}</h3>
                         </div>
                         <ul class="categories clearfix">
-                            <li><a href="blog-single.html#">Collections</a></li>
-                            <li><a href="blog-single.html#">Exhibitions</a></li>
-                            <li><a href="blog-single.html#">People</a></li>
-                            <li><a href="blog-single.html#">Press Release</a></li>
-                            <li><a href="blog-single.html#">Programs</a></li>
-                        </ul>
+                            <li><a href="{{'/xabarlar-royxati/yangilik'}}">{{"Yangiliklar"|_}}</a></li>
+                            <li><a href="{{'/xabarlar-royxati/elon'}}">{{"E'lonlar"|_}}</a></li>
+                            <li><a href="{{'/xabarlar-royxati/konfrensiya'}}">{{"Konfrensiyalar"|_}}</a></li>
+                       </ul>
                     </div>
                     <!--End single sidebar-->
                     <!--Start single sidebar-->
-                    <div class="single-sidebar">
+                    <div class="single-sidebar" style="z-index: 0;">
                         <div class="title">
-                            <h3>Recent Posts</h3>
+                            <h3>{{"Boshqa xabarlar"|_}}</h3>
                         </div>
                         <div class="recent-post">
                             <div class="recent-post-carousel owl-carousel owl-theme owl-nav-style-one">
+                                {% set records = builderList.records %}                              
+                                {% for record in records %}
                                 <!--Start Single Recent Post -->
                                 <div class="single-recent-post">
                                     <div class="img-holder">
-                                        <img src="images/sidebar/recent-post-1.jpg" alt="Awesome Image">
+                                        <img src="{{record.image.path| resize(370,320, { mode:'crop', quality: '60' })}}" alt="Awesome Image">
                                         <div class="overlay-style-one bg1"></div>
                                     </div>
                                     <div class="title-holder text-center">
-                                        <p>March 25, 2019</p>
-                                        <h3><a href="blog-single.html#">Scenes from Stepan Hawkin’s World</a></h3>
+                                        <p>{{record.created_at|date("d, M - Y")}}</p>
+                                        <h3><a href="blog-single.html#">{{record.title}}</a></h3>
                                     </div>    
                                 </div>
                                 <!--End Single Recent Post -->
-                                <!--Start Single Recent Post -->
-                                <div class="single-recent-post">
-                                    <div class="img-holder">
-                                        <img src="images/sidebar/recent-post-1.jpg" alt="Awesome Image">
-                                        <div class="overlay-style-one bg1"></div>
-                                    </div>
-                                    <div class="title-holder text-center">
-                                        <p>March 25, 2019</p>
-                                        <h3><a href="blog-single.html#">Scenes from Stepan Hawkin’s World</a></h3>
-                                    </div>    
-                                </div>
-                                <!--End Single Recent Post -->
+                                  {% else %}
+                                
+                                        <li class="no-data">{{ noRecordsMessage }}</li>
+                                
+                                  {% endfor %}
+                             
                             </div> 
                         </div>
                     </div>
                     <!--End single sidebar-->
-                    
-                    <!--Start single sidebar-->
-                    <div class="single-sidebar">
-                        <div class="title">
-                            <h3>Archives</h3>
-                        </div>
-                        <ul class="archives clearfix">
-                            <li><a href="blog-single.html#">January 2020</a></li>
-                            <li><a href="blog-single.html#">December 2019</a></li>
-                            <li><a href="blog-single.html#">November 2019</a></li>
-                            <li><a href="blog-single.html#">October 2019</a></li>
-                        </ul>
-                    </div>
-                    <!--End single sidebar-->
-                    
-                    <!--Start single-sidebar-->
-                    <div class="single-sidebar last-child">
-                        <div class="title">
-                            <h3>Tags</h3>
-                        </div>
-                        <ul class="popular-tag">
-                            <li><a href="blog-single.html#">Art</a></li>
-                            <li><a href="blog-single.html#">Artist</a></li>
-                            <li><a href="blog-single.html#">Magazin</a></li>
-                            <li><a href="blog-single.html#">Author</a></li>
-                            <li><a href="blog-single.html#">Gallery</a></li>
-                            <li><a href="blog-single.html#">Collection</a></li>
-                            <li><a href="blog-single.html#">Publication</a></li>
-                        </ul>      
-                    </div> 
-                    <!--End single-sidebar-->
-                  
                 </div>    
             </div>
             <!--End Sidebar Wrapper-->
