@@ -1,0 +1,102 @@
+title = "Katalog art ishlanmalar sahifasi"
+url = "/katalog-art-ishlanmalar-sahifasi/:slug?"
+layout = "dinamik-pagelar-uchun"
+==
+<!--Start breadcrumb area-->     
+<section class="breadcrumb-area" style="background-image: url({{'assets/images/breadcrumb/breadcrumb-2.jpg'|theme}});">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content clearfix">
+                    <div class="title">
+                       <h1>{{"Ishlanma"|_}}</h1>
+                    </div>
+                    <div class="breadcrumb-menu">
+                        <ul class="clearfix">
+                            <li><a href="{{'/'}}">{{"Bosh sahifa"|_}}</a></li>
+                             <li><a href="{{'/katalog-rassomlar'}}">{{"Rassomlar katalogi"|_}}</a></li>
+                            <li class="active">{{"Art ishlanmalar"|_}}</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb area-->
+
+<section class="events-single-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="events-single-image-box">
+                    <img src="{{record.image.path}}" alt="{{record.title}}">    
+                </div>   
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="events-single-text-box">
+                    {{record.content|raw}}
+                </div>    
+            </div>
+            <div class="col-xl-4">
+                <div class="events-single-info-box">
+                    <ul class="events-info">
+                        <li>
+                            <p>{{"Rassom :"|_}}</p>
+                            <span>{{record.artists.fish}}</span>
+                        </li>
+                        <li>
+                            <p>Time :</p>
+                            <span>April 1, 2019 - 12:00 AM - 12:00 AM</span>
+                        </li>
+                        <li>
+                            <p>Venue :</p>
+                            <span>32 Quincy Street, Cambridge, MA</span>
+                        </li>
+                        <li>
+                            <p>Duration :</p>
+                            <span>120 Minutes (approximately)</span>
+                        </li>
+                    </ul>
+                    <div class="social-links">
+                        <p>Shear :</p>
+                        <ul class="sociallinks-style-two">
+                            <li>
+                                <a href="event-single.html#"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                            </li>
+                            <li>
+                                <a href="event-single.html#"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
+                            </li>
+                            <li>
+                                <a href="event-single.html#"><i class="fa fa-envelope" aria-hidden="true"></i></a> 
+                            </li>
+                            <li>
+                                <a href="event-single.html#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>    
+                    </div>
+                    
+                </div>    
+            </div>
+        </div>
+        
+      
+        
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="project-single-prev-next-button wow slideInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: slideInUp;">
+                    <div class="button">
+                        <a class="prev" href="event-single.html#"><i class="fa fa-angle-double-left" aria-hidden="true"></i>Prev Event</a>
+                        <a class="middle" href="event-single.html#">
+                            <img src="images/icon/prev-next-button-icon.png" alt="Button Icon">
+                        </a>
+                        <a class="next" href="event-single.html#">Next Event<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>

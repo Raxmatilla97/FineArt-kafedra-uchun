@@ -1,1 +1,3 @@
-static-pages: {  }
+static-pages:
+    kafedra-haqida: {  }
+    kafedra-haqida-taqdimot: {  }

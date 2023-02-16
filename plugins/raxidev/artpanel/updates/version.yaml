@@ -75,3 +75,6 @@
 1.0.26:
     - 'Updated table raxidev_artpanel_xabarlar'
     - builder_table_update_raxidev_artpanel_xabarlar_6.php
+1.0.27:
+    - 'Updated table raxidev_artpanel_rassomlar'
+    - builder_table_update_raxidev_artpanel_rassomlar_2.php

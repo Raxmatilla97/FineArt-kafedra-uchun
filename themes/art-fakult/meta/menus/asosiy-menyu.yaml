@@ -1,23 +1,40 @@
 items:
     -
         title: 'Bosh sahifa'
+        nesting: null
         type: url
         url: /
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '1'
             cssClass: ''
             isExternal: '0'
     -
         title: Xabarlar
+        nesting: null
         type: url
         url: /xabarlar-royxati
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
         items:
+            -
+                title: 'Barcha xabarlar'
+                type: url
+                url: /xabarlar-royxati
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
             -
                 title: Yangiliklar
                 nesting: null
@@ -59,42 +76,48 @@ items:
                     isExternal: '0'
     -
         title: 'Kafedra haqida'
-        nesting: null
         type: url
-        url: /
+        url: /kafedra-haqida
         code: ''
-        reference: null
-        cmsPage: null
-        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
         items:
             -
-                title: "O'qituvchilar ro'yxati"
-                nesting: null
+                title: 'Kafedra haqida taqdimot'
                 type: url
-                url: /
+                url: /kafedra-haqida-taqdimot
                 code: ''
-                reference: null
-                cmsPage: null
-                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
-                title: "O'qitiladigan fanlar"
-                nesting: null
+                title: "Kafedra haqida to'liqroq"
+                type: url
+                url: /kafedra-haqida
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: "O'qituvchilar ro'yxati"
                 type: url
                 url: /
                 code: ''
-                reference: null
-                cmsPage: null
-                replace: null
                 viewBag:
-                    isHidden: '0'
+                    isHidden: '1'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: "O'qitiladigan fanlar"
+                type: url
+                url: /
+                code: ''
+                viewBag:
+                    isHidden: '1'
                     cssClass: ''
                     isExternal: '0'
             -
@@ -258,9 +281,13 @@ items:
                     isExternal: '0'
     -
         title: "Qayta a'loqa"
+        nesting: null
         type: url
         url: /
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''

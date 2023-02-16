@@ -1,0 +1,116 @@
+title = "Katalog rassomlar"
+url = "/katalog-rassomlar/:page?"
+layout = "dinamik-pagelar-uchun"
+
+[builderList]
+modelClass = "RaxiDev\ArtKatalog\Models\Artists"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "fish"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 9
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+
+
+<!--Start breadcrumb area-->     
+<section class="breadcrumb-area" style="background-image: url({{'assets/images/breadcrumb/breadcrumb-2.jpg'|theme}});">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content clearfix">
+                    <div class="title">
+                       <h1>{{"Rassomlar"|_}}</h1>
+                    </div>
+                    <div class="breadcrumb-menu">
+                        <ul class="clearfix">
+                            <li><a href="{{'/'}}">{{"Bosh sahifa"}}</a></li>
+                            <li class="active">{{"Rassomlarning onlayn katalogi"|_}}</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb area-->
+
+
+<section class="exhibitions-area exhibitions-page">
+    <div class="container">
+        <div class="row masonary-layout" style="position: relative; height: 1311px;">
+            {% for record in records %}
+                {% if record.is_active %}
+                <!--Start single exhibition Box-->
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" style="position: absolute; left: 0px; top: 0px;">
+                    <div class="single-exhibition-box style4">
+                        <div class="img-holder">
+                            <img src="{{record.avatar.path| resize(370,385, { mode:'crop', quality: '80' })}}" alt="{{record.fish}}">
+                            <div class="overlay-style-one bg1">
+                                <div class="zoom-button">
+                                    <a class="lightbox-image" data-fancybox="gallery" href="{{record.avatar.path| resize(370,385, { mode:'crop', quality: '80' })}}">
+                                        <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-holder text-center">
+                            <span>{{"Rassom asarlari soni:"|_}} {{record.art|length}}</span>
+                            <h2><a href="{{'/katalog-rassomlar-ichki-sahifasi'}}/{{record.slug}}">{{record.fish}}</a></h2>
+                            <p>{{record.tugulgan_yili}}</p>
+                            <div class="bottom">
+                                <div class="review-box">
+                                    <ul>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                {# <div class="value">$ 60.00</div> #}
+                            </div>
+                        </div>   
+                    </div>    
+                </div>
+                <!--End single exhibition Box-->
+                {% endif %}
+            {% else %}
+                <li class="no-data">{{ noRecordsMessage }}</li>
+            {% endfor %}
+                 
+              
+        </div>
+        <div class="row " style="margin-bottom: 50px;">
+              {% if records.lastPage > 1 %}
+                    <ul class="styled-pagination text-center" style="margin-bottom:50px;">
+                        {% if records.currentPage > 1 %}
+                            <li  class="prev"><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr;</a></li>
+                        {% endif %}
+
+                        {% for page in 1..records.lastPage %}
+                            <li class="count">
+                                <a class="{{ records.currentPage == page ? 'active' : null }}" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                            </li>
+                        {% endfor %}
+
+                        {% if records.lastPage > records.currentPage %}
+                            <li  class="next"><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">&rarr;</a></li>
+                        {% endif %}
+                    </ul>
+                {% endif %}
+                
+        </div>
+    </div>
+</section>

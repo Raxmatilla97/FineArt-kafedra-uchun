@@ -26,6 +26,10 @@ fields:
             extension: auto
         span: auto
         type: fileupload
+    tugulgan_yili:
+        label: 'Tugulgan yili'
+        span: auto
+        type: text
 tabs:
     fields:
         content:

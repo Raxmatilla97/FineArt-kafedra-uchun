@@ -26,6 +26,10 @@ fields:
             extension: auto
         span: auto
         type: fileupload
+    lavozim:
+        label: Lavozimi
+        span: auto
+        type: text
 tabs:
     fields:
         content:

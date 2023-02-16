@@ -1,0 +1,275 @@
+title = "Katalog rassomlar ichki sahifasi"
+url = "/katalog-rassomlar-ichki-sahifasi/:slug?"
+layout = "dinamik-pagelar-uchun"
+
+[builderList]
+modelClass = "RaxiDev\ArtKatalog\Models\Artists"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "fish"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 6
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+
+[builderDetails]
+modelClass = "RaxiDev\ArtKatalog\Models\Artists"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "fish"
+notFoundMessage = "Rassom haqida ma'lumot topilmadi!"
+
+[builderList builderList2]
+modelClass = "RaxiDev\ArtKatalog\Models\Category"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "title"
+sortDirection = "asc"
+
+[builderList builderList3]
+modelClass = "RaxiDev\ArtKatalog\Models\Artwork"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+==
+<?php
+function onStart()
+    {
+      $this->page["slug"] = $this->param('slug');
+
+    }
+?>
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+<!--Start breadcrumb area-->     
+<section class="breadcrumb-area" style="background-image: url({{'assets/images/breadcrumb/breadcrumb-4.jpg'|theme}});">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content clearfix">
+                    <div class="title">
+                        <h1>
+                            {{"Rassom haqida"|_}}
+                    
+                       </h1>
+                    </div>
+                    <div class="breadcrumb-menu">
+                        <ul class="clearfix">
+                            <li><a href="{{'/'}}">{{"Bosh sahifa"|_}}</a></li>
+                            <li><a href="{{'/katalog-rassomlar'}}">{{"Rassomlar sahifasi"|_}}</a></li>
+                            <li class="active">{{"Rassom haqida"|_}}</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb area-->
+
+<!--Start blog single area-->
+<section class="blog-single-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-7 col-md-12 col-sm-12">
+                {% if record %}
+                    <div class="blog-post">
+                        <div class="blog-details-content">
+                            <div class="img-holder">
+                             <style>
+                                .img-center {
+                                      display: block;
+                                      margin-left: auto;
+                                      margin-right: auto;
+                                      width: 50% !important;
+                                    }
+                                </style>
+                                <img class="img-center" src="{{record.avatar.path}}" alt="Awesome Image">
+                            </div>
+                            <div class="text-holder">
+                                <ul class="meta-info">
+                                    <li><a href="#">{{record.created_at|date("d, M - Y")}}</a></li>                                 
+                                </ul>
+                                <h2 class="blog-title">{{record.fish}}</h2>
+                                <div class="text">
+                                    {{record.content|raw}}
+                                </div>
+                            </div>
+                           
+                        </div>
+                        
+                        <!--Start tag box-->
+                        <div class="tag-box">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="tag pull-left">
+                                        <p><span>{{"Teglar"|_}}:</span>{{ record.tags }}</p>
+                                    </div>
+                                    <div class="right pull-right">
+                                        <p>{{"Tarqatish"|_}} :</p>
+                                        <ul class="sociallinks-style-two float-left fix">
+                                            <li><a href="https://www.facebook.com/sharer.php?u={{ this.page.id | page }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="https://twitter.com/intent/tweet?url={{ this.page.id | page }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ this.page.id | page }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        </ul>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End tag box-->
+                    </div>
+                {% else %}
+                    {{ notFoundMessage }}
+                {% endif %}
+            </div>
+            
+            <!--Start sidebar Wrapper-->
+            <div class="col-xl-4 col-lg-5 col-md-9 col-sm-12">
+                <div class="sidebar-wrapper">
+                    <!--Start single sidebar-->
+                    {# <div class="sidebar-search-box">
+                        <form class="search-form" action="#">
+							<input placeholder="Qidirish" type="text">
+							<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</form>
+                    </div> #}
+                    <!--End single sidebar-->
+                    <!--Start single sidebar-->
+                    <div class="single-sidebar">
+                        <div class="title">
+                            <h3>{{"Rassomlar katalogi uchun foydali havolalar"|_}}</h3>
+                        </div>
+                        <ul class="categories clearfix">
+                            <li><a href="{{'/katalog-rassomlar'}}">{{"Rassomlar"|_}}</a></li>
+                            <li><a href="{{'/xabarlar-royxati/elon'}}">{{"Asarlar"|_}}</a></li>
+                            <li><a href="{{'/xabarlar-royxati/konfrensiya'}}">{{"Konfrensiyalar"|_}}</a></li>
+                       </ul>
+                    </div>
+                    <!--End single sidebar-->
+                    <!--Start single sidebar-->
+                    <div class="single-sidebar" style="z-index: 0;">
+                        <div class="title">
+                            <h3>{{"Boshqa rassomlar"|_}}</h3>
+                        </div>
+                        <div class="recent-post">
+                            <div class="recent-post-carousel owl-carousel owl-theme owl-nav-style-one">
+                                {% set records = builderList.records %}                              
+                                {% for record in records %}
+                                <!--Start Single Recent Post -->
+                                <div class="single-recent-post">
+                                    <div class="img-holder">
+                                        <img src="{{record.avatar.path| resize(370,320, { mode:'crop', quality: '60' })}}" alt="Awesome Image">
+                                        <div class="overlay-style-one bg1"></div>
+                                    </div>
+                                    <div class="title-holder text-center">
+                                        <p>{{record.created_at|date("d, M - Y")}}</p>
+                                        <h3><a href="blog-single.html#">{{record.fish}}</a></h3>
+                                    </div>    
+                                </div>
+                                <!--End Single Recent Post -->
+                                  {% else %}
+                                
+                                        <li class="no-data">{{ noRecordsMessage }}</li>
+                                
+                                  {% endfor %}
+                             
+                            </div> 
+                        </div>
+                    </div>
+                    <!--End single sidebar-->
+
+
+
+                    
+                </div>    
+            </div>
+            <!--End Sidebar Wrapper-->         
+
+
+          
+
+
+       </div>
+    </div>
+</section> 
+<!--End blog single area-->
+
+  <!--Start Art Area-->
+            <section class="art-area art-page sortable-masonry" style="padding-top: 0px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="sec-title pull-left">
+                                <p>{{"Boshqa asarlar"|_}}</p>
+                                <div class="big-title"><h1>{{"Rassomning boshqa asarlari"|_}}</h1></div>
+                            </div>
+                            <div class="filters text-center clearfix pull-right">
+                                <ul class="filter-tabs filter-btns clearfix">
+                                      {% set records2 = builderList2.records %}
+                                        <li class="active filter" data-role="button" data-filter=".all">{{"Barchasini ko'rsatish"|_}}</li>
+                                      {% for record in records2 %}
+                                         <li class="filter" data-role="button" data-filter=".{{record.slug}}">{{record.title}}</li>
+                                       {%endfor%}
+                                  
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container art-container">
+                    <div class="row items-container">
+                    {% set records3 = builderList3.records %}
+                                  
+                      {% for record in records3 %}
+                
+                      {% if record.artists.slug == this.page.slug%}
+                        <!--Start Single Art Box-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 masonry-item all {{record.category.slug}}">
+                            <div class="single-art-box">
+                                <div class="img-holder">
+                                    <img src="{{record.image.path}}" alt="{{record.title}}">
+                                    <div class="overlay-content">
+                                        <div class="title"> 
+                                            <h3><a href="{{record.slug}}">{{record.title}}</a></h3>
+                                        </div>
+                                        {# <div class="meta-box">
+                                            <ul>
+                                                <li><a href="art.html#">12<i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                                                <li><a href="art.html#">5<i class="fa fa-comment-o" aria-hidden="true"></i></a></li>
+                                            </ul>
+                                        </div>     #}
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                        <!--End Single Art Box-->
+                        {% endif %}
+                      {%endfor%}
+                    </div>
+                    {# <div class="row">
+                        <div class="col-xl-12">
+                            <div class="view-more-button text-center">
+                                <a class="btn-two" href="art.html#">View More</a>
+                            </div>
+                        </div>
+                    </div> #}
+                </div>
+            </section>
+            <!--End Art Area-->

@@ -32,10 +32,17 @@ class Artists extends Model
     // Agar formada surat yuklash kerak bo'lsa shu metod orqali uni amalga oshirish mumkin
     public $attachOne = [
         'avatar' => ['System\Models\File']
+       
+
     ];
 
     // Agar slug ga avtomatik i++ son qo'shilishini istasak pastdagi metod yoziladi
     protected $slugs = ['slug' => 'fish'];
-
+    
+    //Agar modelda biron tablitsiyaga relation ishlatish kerak bo'lsa uni shu metod orqali bajariladi
+    public $hasMany = [
+        'art' => \RaxiDev\ArtKatalog\Models\Artwork::class,
+        
+    ];
 
 }

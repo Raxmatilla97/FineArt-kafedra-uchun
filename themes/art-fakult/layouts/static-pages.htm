@@ -1,20 +1,13 @@
-url = "/xabarlar-ichki-contenti/:slug?"
-layout = "dinamik-pagelar-uchun"
-title = "Xabarlar ichki contenti"
-
-[builderDetails]
-modelClass = "RaxiDev\ArtPanel\Models\Xabarlar"
-identifierValue = "{{ :slug }}"
-modelKeyColumn = "slug"
-displayColumn = "title"
-notFoundMessage = "Yangilik topilmadi!"
+[staticPage]
+useContent = 1
+default = 0
 
 [builderList]
-modelClass = "RaxiDev\ArtPanel\Models\Xabarlar"
+modelClass = "RaxiDev\ArtPanel\Models\Rassom"
 scope = "-"
 scopeValue = "{{ :scope }}"
-displayColumn = "title"
-noRecordsMessage = "Yangiliklar hali yo'q!"
+displayColumn = "fish"
+noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 recordsPerPage = 6
@@ -22,32 +15,45 @@ pageNumber = "{{ :page }}"
 sortColumn = "created_at"
 sortDirection = "desc"
 ==
-{% set record = builderDetails.record %}
-{% set displayColumn = builderDetails.displayColumn %}
-{% set notFoundMessage = builderDetails.notFoundMessage %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <!-- start header-meta -->
+    {% partial "header-meta" %}
+    <!-- End header-meta -->
+</head>
+
+<body>
+<div class="boxed_wrapper">
+
+{# <div class="preloader"></div>  #}
+
+<!-- start main-header style2-->
+    {% partial "main-header" %}
+<!-- End main-header style2-->
+
+<!-- Hidden Navigation Bar -->
+    {% partial "section-navigation-bar" %}
+<!-- End Hidden Bar -->    
 
 
-<!--Start breadcrumb area-->     
-<section class="breadcrumb-area" style="background-image: url({{'assets/images/breadcrumb/breadcrumb-4.jpg'|theme}});">
+<!--Start CONTENT Area-->
+
+<section class="breadcrumb-area" style="background-image: url({{'assets/images/breadcrumb/breadcrumb-4.jpg'|theme}});" style="z-index: auto;">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="inner-content clearfix">
                     <div class="title">
-                       <h1>
-                       {% if record.bolimlar == 'elon' %}
-                            {{"Kafedra e'loni"|_}}
-                       {% elseif  record.bolimlar == 'yangilik'%}
-                            {{"Kafedra yangiligi"|_}}
-                       {% endif %}
-                       
-                       </h1>
+                        <h1>            
+                          {{"Sahifalar"|_ }}
+                        </h1>
                     </div>
                     <div class="breadcrumb-menu">
                         <ul class="clearfix">
                             <li><a href="{{'/'}}">{{"Bosh sahifa"|_}}</a></li>
-                            <li><a href="{{'/'}}">{{"Xabarlar sahifasi"|_}}</a></li>
-                            <li class="active">{{record.title}}</li>
+                            <li><a href="{{this.page.url}}">{{ page.title }}</a></li>
+                           
                         </ul>    
                     </div>
                 </div>
@@ -62,49 +68,31 @@ sortDirection = "desc"
     <div class="container">
         <div class="row">
             <div class="col-xl-8 col-lg-7 col-md-12 col-sm-12">
-                {% if record %}
+            
                     <div class="blog-post">
-                        <div class="blog-details-content">
-                            <div class="img-holder">
-                                <img class="zoom" src="{{record.image.path}}" alt="Awesome Image">
-                            </div>
+                        <div class="blog-details-content">                           
                             <div class="text-holder">
                                 <ul class="meta-info">
-                                    <li><a href="#">{{record.created_at|date("d, M - Y")}}</a></li>
-                                    <li><a href="#">{{record.user.full_name}}</a></li>
-                                    <li><a href="#">{{record.views_count}} - {{"Martda ko'rilgan"|_}}</a></li>
+                                    <li><a href="#">{{page.created_at|date("d, M - Y")}}</a></li> 
                                 </ul>
-                                <h2 class="blog-title">{{record.title}}</h2>
+                                <h2 class="blog-title">{{page.title}}</h2>
                                 <div class="text">
-                                    {{record.content|raw}}
+                                <style>
+                                table, th, td {
+                                  border: 1px solid black;
+                                }
+                                </style>
+                             
+                                    {% page %}
                                 </div>
                             </div>
-                            {% if record.gallereya_images %}
-                            <div class="bottom-image-box">
-                                <div class="row">
-                                    {% for galereya in record.gallereya_images %}
-                                    <div class="col-xl-6">
-                                        <div class="single-image-box">
-                                            <img class="zoom" src="{{galereya.path}}" alt="Awesome Image">
-                                        </div>
-                                    </div>
-                                    {% endfor %}
-
-                                </div>
-                                <div class="text text-center">
-                                    <p>{{"Xabarga qo'yilgan suratlar"|_}}</p>
-                                </div>
-                            </div>
-                          {% endif %}
+                           
                         </div>
                         
                         <!--Start tag box-->
                         <div class="tag-box">
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="tag pull-left">
-                                        <p><span>{{"Teglar"|_}}:</span>{{ record.tags }}</p>
-                                    </div>
+                                <div class="col-md-12">                                   
                                     <div class="right pull-right">
                                         <p>{{"Tarqatish"|_}} :</p>
                                         <ul class="sociallinks-style-two float-left fix">
@@ -118,38 +106,37 @@ sortDirection = "desc"
                         </div>
                         <!--End tag box-->
                     </div>
-                {% else %}
-                    {{ notFoundMessage }}
-                {% endif %}
+               
             </div>
             
             <!--Start sidebar Wrapper-->
             <div class="col-xl-4 col-lg-5 col-md-9 col-sm-12">
                 <div class="sidebar-wrapper">
                     <!--Start single sidebar-->
-                    <div class="sidebar-search-box">
+                    {# <div class="sidebar-search-box">
                         <form class="search-form" action="#">
 							<input placeholder="Qidirish" type="text">
 							<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 						</form>
-                    </div>
+                    </div> #}
                     <!--End single sidebar-->
                     <!--Start single sidebar-->
                     <div class="single-sidebar">
                         <div class="title">
-                            <h3>{{"Bo'limlar"|_}}</h3>
+                            <h3>{{"Sahifaga oid havolalar"|_}}</h3>
                         </div>
                         <ul class="categories clearfix">
-                            <li><a href="{{'/xabarlar-royxati/yangilik'}}">{{"Yangiliklar"|_}}</a></li>
-                            <li><a href="{{'/xabarlar-royxati/elon'}}">{{"E'lonlar"|_}}</a></li>
-                            <li><a href="{{'/xabarlar-royxati/konfrensiya'}}">{{"Konfrensiyalar"|_}}</a></li>
+                            <li><a href="{{'/kafedra-haqida'}}">{{"Kafedra haqida"|_}}</a></li>
+                            <li><a href="{{'/kafedra-haqida-taqdimot'}}">{{"Kafedra haqida taqdimot"|_}}</a></li>
+                            <li><a href="{{'/'}}">{{"O'qituvchilar haqida"|_}}</a></li>
+                            <li><a href="{{'/'}}">{{"Yozilgan ilmiy maqolalar"|_}}</a></li>
                        </ul>
                     </div>
                     <!--End single sidebar-->
                     <!--Start single sidebar-->
                     <div class="single-sidebar" style="z-index: 0;">
                         <div class="title">
-                            <h3>{{"Boshqa xabarlar"|_}}</h3>
+                            <h3>{{"O'qituvchilar"|_}}</h3>
                         </div>
                         <div class="recent-post">
                             <div class="recent-post-carousel owl-carousel owl-theme owl-nav-style-one">
@@ -158,12 +145,12 @@ sortDirection = "desc"
                                 <!--Start Single Recent Post -->
                                 <div class="single-recent-post">
                                     <div class="img-holder">
-                                        <img src="{{record.image.path| resize(370,320, { mode:'crop', quality: '60' })}}" alt="Awesome Image">
+                                        <img src="{{record.rasm.path|resize(370,320, { mode:'crop', quality: '60' })}}" alt="Awesome Image">
                                         <div class="overlay-style-one bg1"></div>
                                     </div>
                                     <div class="title-holder text-center">
-                                        <p>{{record.created_at|date("d, M - Y")}}</p>
-                                        <h3><a href="blog-single.html#">{{record.title}}</a></h3>
+                                        <p>{{record.lavozim}}</p>
+                                        <h3><a href="blog-single.html#">{{record.fish}}</a></h3>
                                     </div>    
                                 </div>
                                 <!--End Single Recent Post -->
@@ -185,3 +172,27 @@ sortDirection = "desc"
     </div>
 </section> 
 <!--End blog single area-->
+
+
+<!--End CONTENT Area-->  
+
+
+<!--Start subscribe Area-->
+    {% partial "section-subscribe-area" %}
+<!--End subscribe Area-->  
+
+
+<!--Start footer Style3 area-->  
+    {% partial "footer" %}
+<!--End footer Style3 area-->
+
+</div> 
+
+<button class="scroll-top scroll-to-target" data-target="html">
+    <span class="icon-angle"></span>
+</button>
+
+{% partial "footer-js" %}
+
+</body>
+</html>

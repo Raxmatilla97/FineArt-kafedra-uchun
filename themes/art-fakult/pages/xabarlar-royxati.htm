@@ -24,7 +24,12 @@ function onStart()
 ?>
 ==
 {% set records = builderList.records %}
-{% set filteredRecords = records|filter(record => record.bolimlar == this.page.bolim) %}
+
+{% if this.page.bolim %}
+    {% set filteredRecords = records|filter(record => record.bolimlar == this.page.bolim) %}
+{% else %}
+    {% set filteredRecords = builderList.records %}
+{% endif %}
 
 {% set displayColumn = builderList.displayColumn %}
 {% set noRecordsMessage = builderList.noRecordsMessage %}
