@@ -7,7 +7,7 @@ modelClass = "RaxiDev\ArtPanel\Models\Xabarlar"
 scope = "-"
 scopeValue = "{{ :scope }}"
 displayColumn = "title"
-noRecordsMessage = "No records found"
+noRecordsMessage = "Yangiliklar mavjud emas!"
 detailsPage = "-"
 detailsUrlParameter = "id"
 recordsPerPage = 20
@@ -62,7 +62,15 @@ function onStart()
                 <div class="top">
                     <div class="sec-title pdbtm42 text-center">
                         <p>KAFEDRADA YUZ BERAYOTGAN YANGILIKLAR</p>
-                        <div class="big-title"><h1>Yangiliklar & E'lonlar</h1></div>
+                        {% if this.page.bolim == 'yangilik'%}
+                            <div class="big-title"><h1>{{"Kafedra yangiliklari"|_}}</h1></div>
+                        {% elseif  this.page.bolim == 'elon' %}
+                            <div class="big-title"><h1>{{"Kafedra e'lonlari"|_}}</h1></div>
+                        {% elseif  this.page.bolim == 'konfrensiya' %}
+                        <div class="big-title"><h1>{{"Kafedra konfrensiyalari"|_}}</h1></div>
+                        {% else %}
+                        <div class="big-title"><h1>Yangiliklar & E'lonlar & Konfrensiyalar</h1></div>
+                        {% endif %}
                        
                     </div> 
                 </div>

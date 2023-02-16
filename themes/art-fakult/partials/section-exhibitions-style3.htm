@@ -5,7 +5,7 @@ scopeValue = "{{ :scope }}"
 displayColumn = "title"
 noRecordsMessage = "No records found"
 detailsPage = "-"
-detailsUrlParameter = "id"
+detailsUrlParameter = "slug"
 recordsPerPage = 6
 pageNumber = "{{ :page }}"
 sortColumn = "created_at"
@@ -28,7 +28,7 @@ sortDirection = "desc"
                                 </div>
                                 <div class="text-box">
                                     <span>{{record.bolimlar}}</span>
-                                    <h3><a href="{{'xabarlar-ichki-contenti'}}/{{record.slug}}{{record.slug}}">{{record.title}}</a></h3>
+                                    <h3><a href="{{'/'}}{{'xabarlar-ichki-contenti'}}/{{record.slug}}">{{record.title}}</a></h3>
                                     <p>{{record.created_at|date("d-M-Y")}}</p>    
                                 </div>
                             </div>    

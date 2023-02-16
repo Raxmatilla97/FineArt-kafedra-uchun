@@ -1,21 +1,17 @@
 items:
     -
         title: 'Bosh sahifa'
-        nesting: null
         type: url
         url: /
         code: ''
-        reference: null
-        cmsPage: null
-        replace: null
         viewBag:
-            isHidden: '0'
+            isHidden: '1'
             cssClass: ''
             isExternal: '0'
     -
         title: Xabarlar
         type: url
-        url: /xabarlar-royxati/yangilik
+        url: /xabarlar-royxati
         code: ''
         viewBag:
             isHidden: '0'
@@ -24,27 +20,39 @@ items:
         items:
             -
                 title: Yangiliklar
+                nesting: null
                 type: url
                 url: /xabarlar-royxati/yangilik
                 code: ''
+                reference: null
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: "E'lonlar"
+                nesting: null
                 type: url
                 url: /xabarlar-royxati/elon
                 code: ''
+                reference: null
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: Konfrensiyalar
+                nesting: null
                 type: url
                 url: /xabarlar-royxati/konfrensiya
                 code: ''
+                reference: null
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -250,15 +258,11 @@ items:
                     isExternal: '0'
     -
         title: "Qayta a'loqa"
-        nesting: null
         type: url
         url: /
         code: ''
-        reference: null
-        cmsPage: null
-        replace: null
         viewBag:
-            isHidden: '1'
+            isHidden: '0'
             cssClass: ''
             isExternal: '0'
 name: 'Asosiy menyu'
