@@ -28,9 +28,13 @@ items:
         items:
             -
                 title: 'Barcha xabarlar'
+                nesting: null
                 type: url
                 url: /xabarlar-royxati
                 code: ''
+                reference: null
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -76,9 +80,13 @@ items:
                     isExternal: '0'
     -
         title: 'Kafedra haqida'
+        nesting: null
         type: url
         url: /kafedra-haqida
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -86,36 +94,52 @@ items:
         items:
             -
                 title: 'Kafedra haqida taqdimot'
+                nesting: null
                 type: url
                 url: /kafedra-haqida-taqdimot
                 code: ''
+                reference: null
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: "Kafedra haqida to'liqroq"
+                nesting: null
                 type: url
                 url: /kafedra-haqida
                 code: ''
+                reference: null
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: "O'qituvchilar ro'yxati"
+                nesting: null
                 type: url
                 url: /
                 code: ''
+                reference: null
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '1'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: "O'qitiladigan fanlar"
+                nesting: null
                 type: url
                 url: /
                 code: ''
+                reference: null
+                cmsPage: null
+                replace: null
                 viewBag:
                     isHidden: '1'
                     cssClass: ''
@@ -202,26 +226,18 @@ items:
         items:
             -
                 title: Rassomlar
-                nesting: null
                 type: url
-                url: /
+                url: /katalog-rassomlar
                 code: ''
-                reference: null
-                cmsPage: null
-                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: 'Art ishlanmalar'
-                nesting: null
                 type: url
-                url: /
+                url: /katalog-art-ichki-ishlanmalar
                 code: ''
-                reference: null
-                cmsPage: null
-                replace: null
                 viewBag:
                     isHidden: '0'
                     cssClass: ''

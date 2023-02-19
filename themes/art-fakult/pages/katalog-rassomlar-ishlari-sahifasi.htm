@@ -1,9 +1,16 @@
-title = "Katalog art ishlanmalar sahifasi"
 url = "/katalog-art-ishlanmalar-sahifasi/:slug?"
 layout = "dinamik-pagelar-uchun"
+title = "Katalog art ishlanmalar sahifasi"
+
+[builderDetails]
+modelClass = "RaxiDev\ArtKatalog\Models\Artwork"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Art ishlanma topilmadi!"
 ==
 <!--Start breadcrumb area-->     
-<section class="breadcrumb-area" style="background-image: url({{'assets/images/breadcrumb/breadcrumb-2.jpg'|theme}});">
+<section class="breadcrumb-area" style="background-image: url({{'assets/images/breadcrumb/breadcrumb-2.jpg'|theme}});" style="z-index: -1;">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
@@ -25,18 +32,21 @@ layout = "dinamik-pagelar-uchun"
 </section>
 <!--End breadcrumb area-->
 
-<section class="events-single-area">
+<section class="events-single-area" >
     <div class="container">
-        <div class="row">
+        {# <div class="row">
             <div class="col-xl-12">
                 <div class="events-single-image-box">
-                    <img src="{{record.image.path}}" alt="{{record.title}}">    
+                    <img class="zoom" style="display: block; margin-left: auto; margin-right: auto; width: 30%;" src="{{record.image.path}}" alt="{{record.title}}">    
                 </div>   
             </div>
-        </div>
+        </div> #}
         <div class="row">
             <div class="col-xl-8">
                 <div class="events-single-text-box">
+                  <div class="events-single-image-box">
+                    <img class="zoom" style="z-index: 1; display: block; margin-left: auto; margin-right: auto; height: 423px; width: auto;" src="{{record.image.path}}" alt="{{record.title}}">    
+                </div>   
                     {{record.content|raw}}
                 </div>    
             </div>
@@ -45,23 +55,23 @@ layout = "dinamik-pagelar-uchun"
                     <ul class="events-info">
                         <li>
                             <p>{{"Rassom :"|_}}</p>
-                            <span>{{record.artists.fish}}</span>
+                            <span><a style="color: #ffff;" href="{{'/katalog-rassomlar-ichki-sahifasi'}}/{{record.artists.slug}}">{{record.artists.fish}}</a></span>
                         </li>
                         <li>
-                            <p>Time :</p>
-                            <span>April 1, 2019 - 12:00 AM - 12:00 AM</span>
+                            <p>{{"Yaratilgan vaqt"|_}} :</p>
+                            <span>1994</span>
                         </li>
                         <li>
-                            <p>Venue :</p>
-                            <span>32 Quincy Street, Cambridge, MA</span>
+                            <p>{{"O'lchamlari"|_}} :</p>
+                            <span>(340x230)</span>
                         </li>
                         <li>
-                            <p>Duration :</p>
+                            <p>{{"Boshqa ma'lumotlar"|_}} :</p>
                             <span>120 Minutes (approximately)</span>
                         </li>
                     </ul>
                     <div class="social-links">
-                        <p>Shear :</p>
+                        <p>{{"Tarqatish"|_}} :</p>
                         <ul class="sociallinks-style-two">
                             <li>
                                 <a href="event-single.html#"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
@@ -88,11 +98,11 @@ layout = "dinamik-pagelar-uchun"
             <div class="col-xl-12">
                 <div class="project-single-prev-next-button wow slideInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: slideInUp;">
                     <div class="button">
-                        <a class="prev" href="event-single.html#"><i class="fa fa-angle-double-left" aria-hidden="true"></i>Prev Event</a>
-                        <a class="middle" href="event-single.html#">
-                            <img src="images/icon/prev-next-button-icon.png" alt="Button Icon">
+                        <a class="prev" href="event-single.html#"><i class="fa fa-angle-double-left" aria-hidden="true"></i>{{'Orqaga'|_}}</a>
+                        <a class="middle" href="{{'/'}}">
+                            <img style="z-index:1;" src="{{'assets/images/icon/prev-next-button-icon.png'|theme}}" alt="Button Icon">
                         </a>
-                        <a class="next" href="event-single.html#">Next Event<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        <a class="next" href="event-single.html#">{{"Oldinga"|_}}<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     </div>    
                 </div>
             </div>

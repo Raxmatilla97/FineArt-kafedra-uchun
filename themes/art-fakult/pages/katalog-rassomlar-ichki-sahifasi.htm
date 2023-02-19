@@ -1,6 +1,6 @@
-title = "Katalog rassomlar ichki sahifasi"
 url = "/katalog-rassomlar-ichki-sahifasi/:slug?"
 layout = "dinamik-pagelar-uchun"
+title = "Katalog rassomlar ichki sahifasi"
 
 [builderList]
 modelClass = "RaxiDev\ArtKatalog\Models\Artists"
@@ -247,7 +247,7 @@ function onStart()
                                     <img src="{{record.image.path}}" alt="{{record.title}}">
                                     <div class="overlay-content">
                                         <div class="title"> 
-                                            <h3><a href="{{record.slug}}">{{record.title}}</a></h3>
+                                            <h3><a href="{{'/katalog-art-ishlanmalar-sahifasi'}}/{{record.slug}}">{{record.title}}</a></h3>
                                         </div>
                                         {# <div class="meta-box">
                                             <ul>

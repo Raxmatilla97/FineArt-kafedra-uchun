@@ -1,3 +1,7 @@
+title = "Katalog art ichki ishlanmalar"
+url = "/katalog-art-ichki-ishlanmalar/:page?"
+layout = "dinamik-pagelar-uchun"
+
 [builderList]
 modelClass = "RaxiDev\ArtKatalog\Models\Artwork"
 scope = "-"
@@ -6,11 +10,35 @@ displayColumn = "title"
 noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
-recordsPerPage = 10
+recordsPerPage = 20
 pageNumber = "{{ :page }}"
 sortColumn = "created_at"
 sortDirection = "desc"
 ==
+<!--Start breadcrumb area-->     
+<section class="breadcrumb-area" style="background-image: url({{'/storage/app/media/sayt%20sozlamlari%20uchun/EJzYSelXsAUin_E.jpg'}});" style="z-index: -1;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content clearfix">
+                    <div class="title">
+                       <h1>{{"Art ishlanmalar"|_}}</h1>
+                    </div>
+                    <div class="breadcrumb-menu">
+                        <ul class="clearfix">
+                            <li><a href="{{'/'}}">{{"Bosh sahifa"|_}}</a></li>
+                             <li><a href="{{'/katalog-rassomlar'}}">{{"Rassomlar katalogi"|_}}</a></li>
+                            <li class="active">{{"Art ishlanmalar"|_}}</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb area-->
+
+
 {% set records = builderList.records %}
 <section class="art-area">
     <div class="container">
@@ -22,7 +50,7 @@ sortDirection = "desc"
                         <div class="big-title"><h1>{{"O‘zbekiston rassomlarining onlayn katalogi"|_}}</h1></div>
                     </div>
                     <div class="view-more-button">
-                        <a class="btn-one" href="#">{{"Ko'rish"|_}}</a>
+                        <a class="btn-one" href="{{'/katalog-rassomlar'}}">{{"Ko'rish"|_}}</a>
                     </div>
                 </div>
             </div>
